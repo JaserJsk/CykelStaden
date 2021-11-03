@@ -1,0 +1,23 @@
+{
+  "companyLogoLight": "LogoLight.png",
+  "companyLogoDark": "LogoDark.png",
+
+  "itemList": [
+    {
+      "itemIcon": "\ue729",
+      "itemName": "Karta"
+    },
+    {
+      "itemIcon": "\ue72c",
+      "itemName": "Om Appen"
+    },
+    {
+      "itemIcon": "\ue733",
+      "itemName": "St\u00E4ll & Styr"
+    },
+    {
+      "itemIcon": "\ue72b",
+      "itemName": "Inst\u00E4llningar"
+    }
+  ]
+}
