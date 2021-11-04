@@ -25,10 +25,6 @@ namespace CykelStaden.ViewModels
 
         private string itemName;
 
-        private string companyLogoLight;
-
-        private string companyLogoDark;
-
         private Command itemSelectedCommand;
 
         public static double ScreenWidth = DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density * 0.8;
@@ -90,42 +86,6 @@ namespace CykelStaden.ViewModels
             set
             {
                 this.SetProperty(ref this.itemName, value);
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the company logo light.
-        /// </summary>
-        /// <value>The comoany logo light.</value>
-        [DataMember(Name = "companyLogoLight")]
-        public string CompanyLogoLight
-        {
-            get
-            {
-                return App.ImageServerPath + this.companyLogoLight;
-            }
-
-            set
-            {
-                this.SetProperty(ref this.companyLogoLight, value);
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the company logo dark.
-        /// </summary>
-        /// <value>The comoany logo dark.</value>
-        [DataMember(Name = "companyLogoDark")]
-        public string CompanyLogoDark
-        {
-            get
-            {
-                return App.ImageServerPath + this.companyLogoDark;
-            }
-
-            set
-            {
-                this.SetProperty(ref this.companyLogoDark, value);
             }
         }
 

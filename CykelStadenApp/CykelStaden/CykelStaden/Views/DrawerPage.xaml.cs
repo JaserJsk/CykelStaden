@@ -37,14 +37,13 @@ namespace CykelStaden.Views
 
         #region Methods
 
-        private void hamburgerButton_Clicked(object sender, EventArgs e)
+        private void menuButton_Clicked(object sender, EventArgs e)
         {
             navigationDrawer.ToggleDrawer();
         }
 
         private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            // Your codes here
             navigationDrawer.ToggleDrawer();
         }
 

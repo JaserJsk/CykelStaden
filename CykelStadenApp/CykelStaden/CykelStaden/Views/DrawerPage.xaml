@@ -22,13 +22,13 @@
                              Orientation="Horizontal"
                              HeightRequest="56">
 
-                    <button:SfButton x:Name="hamburgerButton" 
+                    <button:SfButton x:Name="menuButton" 
                                      HeightRequest="50" 
                                      WidthRequest="50" 
                                      HorizontalOptions="Start" 
                                      FontSize="25" 
                                      TextColor="White"
-                                     Clicked="hamburgerButton_Clicked"
+                                     Clicked="menuButton_Clicked"
                                      Style="{StaticResource IconButtonStyle}"
                                      Text="{StaticResource BurgerMenu}"/>
 
@@ -145,7 +145,6 @@
                         <Image x:Name="logoImage"
                                VerticalOptions="Start"
                                WidthRequest="200">
-
                         </Image>
                     </StackLayout>
                     
