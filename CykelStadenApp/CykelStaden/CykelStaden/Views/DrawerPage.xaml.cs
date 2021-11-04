@@ -22,16 +22,20 @@ namespace CykelStaden.Views
             this.InitializeComponent();
             this.BindingContext = DrawerViewModel.BindingContext;
 
+            checkPlatform();
             loadImages();
             changeLogoOnTheme();
         }
 
         #region Fields
 
-        public static double ScreenWidth = DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density * 0.8;
-        public static double ScreenHeight = DeviceDisplay.MainDisplayInfo.Height / DeviceDisplay.MainDisplayInfo.Density * 0.25;
-        public static double DrawerTopContentHeight = DeviceDisplay.MainDisplayInfo.Height / DeviceDisplay.MainDisplayInfo.Density * 0.50;
-        public static double DrawerBottomContentHeight = DeviceDisplay.MainDisplayInfo.Height / DeviceDisplay.MainDisplayInfo.Density * 0.15;
+        private Color BlueColor { get; set; } = Color.FromHex("#277EFF");
+        private Color WhiteColor { get; set; } = Color.FromHex("#FFFFFF");
+        private Color BlackColor { get; set; } = Color.FromHex("#000000");
+
+        public static double DrawerHeaderWidth = DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density * 0.8;
+        public static double DrawerHeaderHeight = DeviceDisplay.MainDisplayInfo.Height / DeviceDisplay.MainDisplayInfo.Density * 0.25;
+        public static double DrawerFooterHeight = DeviceDisplay.MainDisplayInfo.Height / DeviceDisplay.MainDisplayInfo.Density * 0.10;
 
         #endregion
 
@@ -47,6 +51,22 @@ namespace CykelStaden.Views
             navigationDrawer.ToggleDrawer();
         }
 
+        private void checkPlatform()
+        {
+            switch (Device.RuntimePlatform)
+            {
+                case Device.Android:
+                    drawerNavBar.BackgroundColor = BlueColor;
+                    menuButton.TextColor = WhiteColor;
+                    break;
+
+                case Device.iOS:
+                    drawerNavBar.BackgroundColor = WhiteColor;
+                    menuButton.TextColor = BlackColor;
+                    break;
+            } 
+        }
+
         private void loadImages()
         {
             logoImage.Source = (FileImageSource)ImageSource.FromFile("LogoLight.png");
@@ -56,21 +76,29 @@ namespace CykelStaden.Views
 
         void changeLogoOnTheme()
         {
-            Application.Current.RequestedThemeChanged += (past, current) =>
+            if (AppInfo.RequestedTheme == AppTheme.Dark)
             {
-                switch (current.RequestedTheme)
+                logoImage.Source = (FileImageSource)ImageSource.FromFile("LogoDark.png");
+                if (Device.RuntimePlatform == Device.iOS)
                 {
-                    case OSAppTheme.Dark:
-                        logoImage.Source = (FileImageSource)ImageSource.FromFile("LogoDark.png");
-                        break;
-                    case OSAppTheme.Light:
-                        logoImage.Source = (FileImageSource)ImageSource.FromFile("LogoLight.png");
-                        break;
-                    case OSAppTheme.Unspecified:
-                        logoImage.Source = (FileImageSource)ImageSource.FromFile("LogoLight.png");
-                        break;
+                    footerBg.BackgroundColor = BlackColor;
                 }
-            };
+                else {
+                    footerBg.BackgroundColor = Color.Transparent;
+                }
+
+            }
+            else
+            {
+                logoImage.Source = (FileImageSource)ImageSource.FromFile("LogoLight.png");
+                if (Device.RuntimePlatform == Device.iOS)
+                {
+                    footerBg.BackgroundColor = WhiteColor;
+                }
+                else {
+                    footerBg.BackgroundColor = Color.Transparent;
+                }
+            }
         }
 
         #endregion

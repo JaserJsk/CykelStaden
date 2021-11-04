@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="CykelStaden.Views.DrawerPage"
+             xmlns:local="clr-namespace:CykelStaden.Views"
              xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assembly=Syncfusion.SfNavigationDrawer.XForms"
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
-             xmlns:resource="clr-namespace:CykelStaden.Resources.Langs"
-             xmlns:local="clr-namespace:CykelStaden.Views">
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
 
     <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer"
-                                         DrawerWidth ="{Binding Source={x:Static local:DrawerPage.ScreenWidth}}"
-                                         DrawerHeaderHeight="{Binding Source={x:Static local:DrawerPage.ScreenHeight}}">
+                                         DrawerWidth ="{Binding Source={x:Static local:DrawerPage.DrawerHeaderWidth}}"
+                                         DrawerHeaderHeight="{Binding Source={x:Static local:DrawerPage.DrawerHeaderHeight}}"
+                                         DrawerFooterHeight="{Binding Source={x:Static local:DrawerPage.DrawerFooterHeight}}">
         <navigationdrawer:SfNavigationDrawer.ContentView>
             <Grid x:Name="mainContentView" 
                   BackgroundColor="White">
@@ -18,16 +20,15 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <StackLayout BackgroundColor="#277eff" 
-                             Orientation="Horizontal"
-                             HeightRequest="56">
+                <StackLayout x:Name="drawerNavBar" 
+                             HeightRequest="56"
+                             Orientation="Horizontal">
 
                     <button:SfButton x:Name="menuButton" 
                                      HeightRequest="50" 
                                      WidthRequest="50" 
                                      HorizontalOptions="Start" 
                                      FontSize="25" 
-                                     TextColor="White"
                                      Clicked="menuButton_Clicked"
                                      Style="{StaticResource IconButtonStyle}"
                                      Text="{StaticResource BurgerMenu}"/>
@@ -86,71 +87,68 @@
                 </StackLayout>
             </Grid>
         </navigationdrawer:SfNavigationDrawer.DrawerHeaderView>
+        
         <navigationdrawer:SfNavigationDrawer.DrawerContentView>
 
             <ScrollView>
-                <Grid >
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="{Binding Source={x:Static local:DrawerPage.DrawerTopContentHeight}}" />
-                        <RowDefinition Height="{Binding Source={x:Static local:DrawerPage.DrawerBottomContentHeight}}" />
-                    </Grid.RowDefinitions>
+                <ListView x:Name="listView"
+                          SelectionMode="None"
+                          RowHeight="70"
+                          ItemsSource="{Binding ItemList}"
+                          ItemSelected="listView_ItemSelected"
+                          SeparatorColor="Transparent">
 
-                    <ListView Grid.Row="0"
-                              x:Name="listView"
-                              SelectionMode="None"
-                              RowHeight="70"
-                              ItemsSource="{Binding ItemList}"
-                              ItemSelected="listView_ItemSelected"
-                              SeparatorColor="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="32,10,0,0" 
+                                             VerticalOptions="Center" >
 
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <StackLayout Margin="32,10,0,0" 
-                                                 VerticalOptions="Center" >
+                                    <Grid RowDefinitions="1*, Auto">
 
-                                        <Grid RowDefinitions="1*, Auto">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50"/>
+                                            <ColumnDefinition Width="auto"/>
+                                        </Grid.ColumnDefinitions>
 
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="50"/>
-                                                <ColumnDefinition Width="auto"/>
-                                            </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0"
+                                               Grid.Column="0" 
+                                               HorizontalTextAlignment="Start"
+                                               HorizontalOptions="Start"
+                                               FontSize="25"
+                                               Style="{StaticResource IconLabelStyle}"
+                                               Text="{Binding ItemIcon}" />
 
-                                            <Label Grid.Row="0"
-                                                   Grid.Column="0" 
-                                                   HorizontalTextAlignment="Start"
-                                                   HorizontalOptions="Start"
-                                                   FontSize="25"
-                                                   Style="{StaticResource IconLabelStyle}"
-                                                   Text="{Binding ItemIcon}" />
+                                        <Label Grid.Row="0"
+                                               Grid.Column="1"
+                                               HorizontalTextAlignment="Start"
+                                               HorizontalOptions="Start"
+                                               Margin="10,0,0,0" 
+                                               Text="{Binding ItemName}" 
+                                               FontSize="16"/>
 
-                                            <Label Grid.Row="0"
-                                                   Grid.Column="1"
-                                                   HorizontalTextAlignment="Start"
-                                                   HorizontalOptions="Start"
-                                                   Margin="10,0,0,0" 
-                                                   Text="{Binding ItemName}" 
-                                                   FontSize="16"/>
-                                            
-                                        </Grid>
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
-                    <StackLayout Grid.Row="1"
-                                 VerticalOptions="EndAndExpand">
-                        <Image x:Name="logoImage"
-                               VerticalOptions="Start"
-                               WidthRequest="200">
-                        </Image>
-                    </StackLayout>
-                    
-                </Grid>
             </ScrollView>
+
         </navigationdrawer:SfNavigationDrawer.DrawerContentView>
+
+        <navigationdrawer:SfNavigationDrawer.DrawerFooterView>
+
+            <StackLayout x:Name="footerBg">
+                <Image x:Name="logoImage"
+                   HeightRequest="80"
+                   VerticalOptions="Start">
+                </Image>
+            </StackLayout>
+
+        </navigationdrawer:SfNavigationDrawer.DrawerFooterView>
 
     </navigationdrawer:SfNavigationDrawer>
 
