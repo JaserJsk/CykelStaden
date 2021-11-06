@@ -1,41 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<ContentView
     x:Class="CykelStaden.Views.AboutPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-    xmlns:controls="clr-namespace:CykelStaden.Controls"
-    x:Name="AboutUsPage"
-    Title="About"
+    xmlns:resources="clr-namespace:CykelStaden.Resources.Langs"
     BackgroundColor="{DynamicResource Gray-Bg}"
     NavigationPage.HasNavigationBar="False">
 
-    <ContentPage.Content>
+    <ContentView.Content>
         <Grid
             ColumnSpacing="0"
             RowDefinitions="Auto,*"
             RowSpacing="0">
-
-            <!--  Title View  -->
-            <controls:TitleView Title="About Us">
-                <controls:TitleView.LeadingView>
-                    <!--  Back button command  -->
-                    <buttons:SfButton
-                        x:Name="backButton"
-                        Command="{Binding Path=BindingContext.BackButtonCommand, Source={x:Reference AboutUsPage}}"
-                        CommandParameter="{x:Reference backButton}"
-                        Style="{StaticResource IconButtonStyle}"
-                        Text="{StaticResource Back}" />
-                </controls:TitleView.LeadingView>
-            </controls:TitleView>
 
             <ScrollView
                 Grid.Row="1"
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
                 <StackLayout
-                    HorizontalOptions="Center"
                     Spacing="0"
+                    Padding="0,20,0,20"
+                    HorizontalOptions="Center"
                     VerticalOptions="Center">
 
                     <!--  Product image  -->
@@ -48,22 +33,22 @@
                         </Image.Source>
                     </Image>
 
-                    <!--  Product version  -->
+                    <!--  App Version  -->
                     <Label
                         Margin="0,8.7,0,0"
                         HorizontalOptions="CenterAndExpand"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource SimpleLabelStyle}"
-                        Text="{Binding ProductVersion, StringFormat='Version {0}'}"
+                        Text="{x:Static resources:Lang.AppVersion}"
                         VerticalOptions="Start"
                         VerticalTextAlignment="Start" />
 
-                    <!--  Product title  -->
+                    <!--  Bikecity Title  -->
                     <Label
                         LineHeight="{OnPlatform Android=1.25,
                                                 Default=-1}"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="Acme Products">
+                        Text="{x:Static resources:Lang.BikeCityTitle}">
                         <Label.Margin>
                             <OnIdiom
                                 x:TypeArguments="Thickness"
@@ -72,13 +57,119 @@
                         </Label.Margin>
                     </Label>
 
-                    <!--  Product description  -->
+                    <!--  Bikecity Description  -->
                     <Label
-                        Margin="15,0,15,0"
+                        Margin="16,0,16,0"
+                        HorizontalTextAlignment="Start"
                         Style="{StaticResource DescriptionLabelStyle}"
-                        Text="{Binding ProductDescription}" />
+                        Text="{x:Static resources:Lang.BikeCityDesc}" />
+
+                    <!--  TrafficDis Title  -->
+                    <Label
+                        LineHeight="{OnPlatform Android=1.25,
+                                                Default=-1}"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="{x:Static resources:Lang.TrafficDisTitle}">
+                        <Label.Margin>
+                            <OnIdiom
+                                x:TypeArguments="Thickness"
+                                Default="0, 32, 0, 8"
+                                Phone="0, 16, 0, 16" />
+                        </Label.Margin>
+                    </Label>
+
+                    <!--  TrafficDis Description  -->
+                    <Label
+                        Margin="16,0,16,0"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DescriptionLabelStyle}"
+                        Text="{x:Static resources:Lang.TrafficDisDesc}" />
+
+                    <!--  SteerSet Title  -->
+                    <Label
+                        LineHeight="{OnPlatform Android=1.25,
+                                                Default=-1}"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="{x:Static resources:Lang.SteerSetTitle}">
+                        <Label.Margin>
+                            <OnIdiom
+                                x:TypeArguments="Thickness"
+                                Default="0, 32, 0, 8"
+                                Phone="0, 16, 0, 16" />
+                        </Label.Margin>
+                    </Label>
+
+                    <!--  SteerSet Description  -->
+                    <Label
+                        Margin="16,0,16,0"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DescriptionLabelStyle}"
+                        Text="{x:Static resources:Lang.SteerSetDesc}" />
+
+                    <!--  ErrorRep Title  -->
+                    <Label
+                        LineHeight="{OnPlatform Android=1.25,
+                                                Default=-1}"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="{x:Static resources:Lang.ErrorRepTitle}">
+                        <Label.Margin>
+                            <OnIdiom
+                                x:TypeArguments="Thickness"
+                                Default="0, 32, 0, 8"
+                                Phone="0, 16, 0, 16" />
+                        </Label.Margin>
+                    </Label>
+
+                    <!--  ErrorRep Description  -->
+                    <Label
+                        Margin="16,0,16,0"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DescriptionLabelStyle}"
+                        Text="{x:Static resources:Lang.ErrorRepDesc}" />
+
+                    <!--  PersonalData Title  -->
+                    <Label
+                        LineHeight="{OnPlatform Android=1.25,
+                                                Default=-1}"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="{x:Static resources:Lang.PersonalDataTitle}">
+                        <Label.Margin>
+                            <OnIdiom
+                                x:TypeArguments="Thickness"
+                                Default="0, 32, 0, 8"
+                                Phone="0, 16, 0, 16" />
+                        </Label.Margin>
+                    </Label>
+
+                    <!--  PersonalData Description  -->
+                    <Label
+                        Margin="16,0,16,0"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DescriptionLabelStyle}"
+                        Text="{x:Static resources:Lang.PersonalDataDesc}" />
+
+                    <!--  AccessibilityRep Title  -->
+                    <Label
+                        LineHeight="{OnPlatform Android=1.25,
+                                                Default=-1}"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="{x:Static resources:Lang.AccessibilityRepTitle}">
+                        <Label.Margin>
+                            <OnIdiom
+                                x:TypeArguments="Thickness"
+                                Default="0, 32, 0, 8"
+                                Phone="0, 16, 0, 16" />
+                        </Label.Margin>
+                    </Label>
+
+                    <!--  AccessibilityRep Description  -->
+                    <Label
+                        Margin="16,0,16,0"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DescriptionLabelStyle}"
+                        Text="{x:Static resources:Lang.AccessibilityRepDesc}" />
                 </StackLayout>
             </ScrollView>
         </Grid>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentView.Content>
+</ContentView>

@@ -3,11 +3,13 @@
              xmlns:local="clr-namespace:CykelStaden.Views"
              xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:resources="clr-namespace:CykelStaden.Resources.Langs"
              xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assembly=Syncfusion.SfNavigationDrawer.XForms"
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             ios:Page.UseSafeArea="true">
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="{DynamicResource Gray-100}">
 
     <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer"
                                          DrawerWidth ="{Binding Source={x:Static local:DrawerPage.DrawerHeaderWidth}}"
@@ -15,7 +17,7 @@
                                          DrawerFooterHeight="{Binding Source={x:Static local:DrawerPage.DrawerFooterHeight}}">
         <navigationdrawer:SfNavigationDrawer.ContentView>
             <Grid x:Name="mainContentView" 
-                  BackgroundColor="White">
+                  BackgroundColor="{DynamicResource Gray-100}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition/>
@@ -37,22 +39,25 @@
                            HeightRequest="50" 
                            HorizontalTextAlignment="Center" 
                            VerticalTextAlignment="Center" 
-                           Text="CYKELSTADEN" 
+                           Text="{x:Static resources:Lang.AppName}" 
                            FontSize="16" 
                            TextColor="White" />
 
                 </StackLayout>
-                <Label Grid.Row="1" 
-                       x:Name="contentLabel" 
-                       VerticalOptions="Center" 
-                       HorizontalOptions="Center" 
-                       Text="Main Page" 
-                       FontSize="14" 
-                       TextColor="White"/>
+
+                <StackLayout Grid.Row="1" x:Name="ContentSection" Margin="0,-6,0,0">
+                    <local:AboutPage x:Name="aboutPage" IsVisible="False"/>
+                    <local:SettingsPage x:Name="settingsPage" IsVisible="False"/>
+
+                </StackLayout>
+
             </Grid>
         </navigationdrawer:SfNavigationDrawer.ContentView>
+        
+        <!--  **************************************************************  -->
+        <!--  Drawer Header  -->
         <navigationdrawer:SfNavigationDrawer.DrawerHeaderView>
-            <Grid BackgroundColor="White">
+            <Grid BackgroundColor="{DynamicResource Gray-100}">
                 <Image x:Name="headerImage" 
                        HorizontalOptions="FillAndExpand"
                        VerticalOptions="FillAndExpand"
@@ -63,7 +68,7 @@
                                  CornerRadius="50"
                                  WidthRequest="72"
                                  HeightRequest="72"
-                                 BackgroundColor="White">
+                                 BackgroundColor="{DynamicResource Gray-100}">
 
                     <Image x:Name="userImage"
                            Aspect="AspectFill"/>
@@ -87,15 +92,16 @@
                 </StackLayout>
             </Grid>
         </navigationdrawer:SfNavigationDrawer.DrawerHeaderView>
-        
+
+        <!--  **************************************************************  -->
+        <!--  Drawer Content  -->
         <navigationdrawer:SfNavigationDrawer.DrawerContentView>
 
             <ScrollView>
 
                 <ListView x:Name="listView"
-                          SelectionMode="None"
+                          SelectionMode="Single"
                           RowHeight="70"
-                          ItemsSource="{Binding ItemList}"
                           ItemSelected="listView_ItemSelected"
                           SeparatorColor="Transparent">
 
@@ -117,15 +123,16 @@
                                                HorizontalTextAlignment="Start"
                                                HorizontalOptions="Start"
                                                FontSize="25"
+                                               FontFamily="Material-Outlined"
                                                Style="{StaticResource IconLabelStyle}"
-                                               Text="{Binding ItemIcon}" />
+                                               Text="{Binding Icon}" />
 
                                         <Label Grid.Row="0"
                                                Grid.Column="1"
                                                HorizontalTextAlignment="Start"
                                                HorizontalOptions="Start"
                                                Margin="10,0,0,0" 
-                                               Text="{Binding ItemName}" 
+                                               Text="{Binding Name}" 
                                                FontSize="16"/>
 
                                     </Grid>
@@ -134,11 +141,11 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
             </ScrollView>
-
         </navigationdrawer:SfNavigationDrawer.DrawerContentView>
 
+        <!--  **************************************************************  -->
+        <!--  Drawer Footer  -->
         <navigationdrawer:SfNavigationDrawer.DrawerFooterView>
 
             <StackLayout x:Name="footerBg">

@@ -1,12 +1,16 @@
 using System;
+using System.Resources;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: NeutralResourcesLanguage("sv-SE")]
+[assembly: ExportFont("MaterialIcons-Regular.ttf", Alias = "Material-Regular")]
+[assembly: ExportFont("MaterialIconsOutlined-Regular.otf", Alias = "Material-Outlined")]
 [assembly: ExportFont("Montserrat-Bold.ttf",Alias="Montserrat-Bold")]
-     [assembly: ExportFont("Montserrat-Medium.ttf", Alias = "Montserrat-Medium")]
-     [assembly: ExportFont("Montserrat-Regular.ttf", Alias = "Montserrat-Regular")]
-     [assembly: ExportFont("Montserrat-SemiBold.ttf", Alias = "Montserrat-SemiBold")]
-     [assembly: ExportFont("UIFontIcons.ttf", Alias = "FontIcons")]
+[assembly: ExportFont("Montserrat-Medium.ttf", Alias = "Montserrat-Medium")]
+[assembly: ExportFont("Montserrat-Regular.ttf", Alias = "Montserrat-Regular")]
+[assembly: ExportFont("Montserrat-SemiBold.ttf", Alias = "Montserrat-SemiBold")]
+[assembly: ExportFont("UIFontIcons.ttf", Alias = "FontIcons")]
 namespace CykelStaden
 {
     public partial class App : Application

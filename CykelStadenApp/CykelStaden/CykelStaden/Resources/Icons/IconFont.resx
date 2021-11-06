@@ -117,16 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>Om Appen</value>
+  <data name="AltRoute" xml:space="preserve">
+    <value>alt_route</value>
   </data>
-  <data name="Map" xml:space="preserve">
-    <value>Karta</value>
+  <data name="Apps" xml:space="preserve">
+    <value>apps</value>
   </data>
-  <data name="Nextbike" xml:space="preserve">
-    <value>Till Styr &amp; Ställ</value>
+  <data name="ArrowForwardIos" xml:space="preserve">
+    <value>arrow_forward_ios</value>
+  </data>
+  <data name="DarkMode" xml:space="preserve">
+    <value>dark_mode</value>
+  </data>
+  <data name="DirectionsBike" xml:space="preserve">
+    <value>directions_bike</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>language</value>
+  </data>
+  <data name="LocalGasStation" xml:space="preserve">
+    <value>local_gas_station</value>
+  </data>
+  <data name="LocalParking" xml:space="preserve">
+    <value>local_parking</value>
+  </data>
+  <data name="LocationOn" xml:space="preserve">
+    <value>location_on</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>notifications</value>
+  </data>
+  <data name="Policy" xml:space="preserve">
+    <value>policy</value>
+  </data>
+  <data name="Quiz" xml:space="preserve">
+    <value>quiz</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Inställningar</value>
+    <value>settings</value>
+  </data>
+  <data name="Traffic" xml:space="preserve">
+    <value>traffic</value>
   </data>
 </root>

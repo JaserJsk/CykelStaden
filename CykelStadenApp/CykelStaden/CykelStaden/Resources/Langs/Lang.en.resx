@@ -118,107 +118,103 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>Om Appen</value>
+    <value>About App</value>
   </data>
   <data name="AccessibilityRepDesc" xml:space="preserve">
-    <value>Göteborgs Stad vill att så många som möjligt ska kunna använda den här appen. Tillgänglighetsredogörelsen beskriver hur
-Cykelstaden uppfyller lagen om tillgänglighet till digital offentlig service, eventuella kända tillgänglighetsproblem och hur du kan rapportera brister till oss så att vi kan åtgärda dem. Här finns tillgänglighetsredogörelsen för Cykelstaden Kontaktuppgifter
-Du kan kontakta Göteborgs Stad genom att
-mejla till goteborg@goteborg.se eller ringa
+    <value>The City of Gothenburg wants as many as be able to use this app. The accessibility report describes how Cykelstaden complies with the law on accessibility
+to digital public service, any known accessibility issues and how you can report deficiencies to us so that we can remedy them.
+Here is the accessibility report for Cykelstaden Contact information.
+You can contact the City of Gothenburg by
+email goteborg@goteborg.se or call
 031-365 00 00</value>
   </data>
   <data name="AccessibilityRepTitle" xml:space="preserve">
-    <value>Tillgänglighetsredogörelse</value>
+    <value>Accessibility Report</value>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>CYKELSTADEN</value>
+    <value>BIKECITY</value>
   </data>
   <data name="AppVersion" xml:space="preserve">
     <value>Version 2.0.0</value>
   </data>
   <data name="BikeCityDesc" xml:space="preserve">
-    <value>Cykelstaden är framtagen av trafikkontoret i Göteborgs Stad för att förenkla cyklistens vardag. I Cykelstaden hittar du lånecyklarna Styr &amp; Ställ, cykelvägar, cykelparkeringar samt stadens alla offentliga cykelpumpar. Du kan även planera din resväg och anmäla skador, hinder eller andra defekter som du upptäckt på cykelbanan. Trafikstörningsfunktionen gör det möjligt
-att se pågående vägarbeten som påverkar cykelbanor. Om du upptäckt ett fel i appen Cykelstaden anmäler du det genom
-felanmälningsfunktionen.</value>
+    <value>The bicycle city is developed by the traffic office in the City of Gothenburg to simplify the cyclist's everyday. In Cykelstaden you will find the loan bicycles Steer &amp; Set, bike paths, bike parking and all the city's public bicycle pumps. You can also plan your itinerary and report damage, obstacles or other defects that you have discovered on the bike path. The traffic disruption function makes it possible to see ongoing road works that affect cycle paths. If you discover an error in the app
+Cykelstaden, you report it through the error reporting function.</value>
   </data>
   <data name="BikeCityTitle" xml:space="preserve">
-    <value>Cykelstaden</value>
+    <value>Bikecity</value>
   </data>
   <data name="BikeParking" xml:space="preserve">
-    <value>Cykelparkeringar</value>
+    <value>Bike Parking</value>
   </data>
   <data name="BikePumps" xml:space="preserve">
-    <value>Cykelpumpar</value>
+    <value>Bicycle Pumps</value>
   </data>
   <data name="BikeRoutes" xml:space="preserve">
-    <value>Cyckelvägar</value>
+    <value>Bike Routes</value>
   </data>
   <data name="DarkMode" xml:space="preserve">
-    <value>Mörkt Läge</value>
+    <value>Dark Mode</value>
   </data>
   <data name="ErrorRepDesc" xml:space="preserve">
-    <value>I felanmälningsformuläret kan du anmäla skador, defekter, hinder eller liknande som du upptäckt på cykelbanor inom Göteborg Stad. Felanmälan skicka till Göteborgs Stads kontaktcenter där ärendet skickas vidare till den handläggare som ansvarar för din fråga. När du skickar en fråga via felanmälningsformuläret registreras din fråga som en allmän handling i Göteborgs Stad. Allmänna handlingar är dokument som alla medborgare har tillgång till och rätt att begära ut och läsa.
-Att din fråga blir en allmän handling beror på att vi i Sverige har en offentlighetsprincip som ger alla medborgare rätt till insyn i
-kommunens arbete.</value>
+    <value>You can report in the error report form injuries, defects, obstacles or the like like you discovered on cycle paths within the City of Gothenburg. Send error report to the City of Gothenburg contact center where the case is forwarded to the administrator responsible for your question. When you send a question via the error report form registers your question as a public document in the City of Gothenburg. Public documents are documents like any other citizens have access to and the right to request out and read. That your question becomes a public document depends that we in Sweden have a principle of openness
+which gives all citizens the right to access the municipality's work.</value>
   </data>
   <data name="ErrorRepTitle" xml:space="preserve">
-    <value>Felanmälan</value>
+    <value>Error Report</value>
   </data>
   <data name="Faq" xml:space="preserve">
-    <value>Frågor &amp; Svar</value>
+    <value>FAQ</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Språk</value>
+    <value>Language</value>
   </data>
   <data name="Map" xml:space="preserve">
-    <value>Karta</value>
+    <value>Map</value>
   </data>
   <data name="Nextbike" xml:space="preserve">
     <value>Nextbike</value>
   </data>
   <data name="Notifications" xml:space="preserve">
-    <value>Aviseringar</value>
+    <value>Notifications</value>
   </data>
   <data name="PersonalDataDesc" xml:space="preserve">
-    <value>När du använder appen samlas inga andra uppgifter in än de som du väljer att ange om du gör en felanmälan.
-När du skickar in en felanmälan ska du ange en GPS-position för felet genom att ange en adress eller välja din aktuella position.
-Felets position behövs för att felet ska kunna åtgärdas. Har du GPS:en påslagen används dessa uppgifter genom att du samtycker till att appen får använda din position. Du kan när som helst ta tillbaka ditt samtycke genom att välja att inte låta appen använda din position. Dina GPS-uppgifter sparas inte någonstans. Appen använder din GPS-position för att
-underlätta för dig som användare. Läs om hur trafikkontoret behandlar dina personuppgifter</value>
+    <value>When you use the app, no one else collects information than the one you choose to enter you report an error. When submitting an error report, enter a GPS position for the error by entering an address or select your current location. The position of the fault is needed for the fault to be able to be remedied.
+If you have the GPS switched on, these are used information by agreeing to the app may use your position. You can withdraw your consent at any time
+by choosing not to allow the app to use your position. Your GPS data is not saved somewhere. The app uses your GPS position to facilitate for you as a user.
+Read about how the traffic office treats yours personal data</value>
   </data>
   <data name="PersonalDataTitle" xml:space="preserve">
-    <value>Personuppgiftsbehandling</value>
+    <value>Personal Data Processing</value>
   </data>
   <data name="PersonalSettings" xml:space="preserve">
-    <value>Personliga Inställningar</value>
+    <value>Personal Settings</value>
   </data>
   <data name="PrivacyPolicy" xml:space="preserve">
-    <value>Integritetspolicy</value>
+    <value>Privacy &amp; Policy</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Inställningar</value>
+    <value>Settings</value>
   </data>
   <data name="SteerSet" xml:space="preserve">
-    <value>Styr &amp; Ställ (Nextbike)</value>
+    <value>Steer &amp; Set (Nextbike)</value>
   </data>
   <data name="SteerSetDesc" xml:space="preserve">
-    <value>I appen kan du se alla Styr &amp; Ställ-stationer samt antal lediga cyklar vid varje station. För att hyra en Styr &amp; Ställ-cykel, klicka på länken "Till Styr &amp; Ställ (Nextbike)" i menyn.</value>
+    <value>In the app you can see all Control &amp; Setup stations and the number of vacant bicycles at each station. For to rent a Steer &amp; Set bike, click on the link "To Steer &amp; Set (Nextbike)" in the menu.</value>
   </data>
   <data name="SteerSetTitle" xml:space="preserve">
-    <value>Styr &amp; Ställ</value>
+    <value>Steer &amp; Set</value>
   </data>
   <data name="Support" xml:space="preserve">
-    <value>Hjälp &amp; Stöd</value>
+    <value>Support</value>
   </data>
   <data name="TrafficDisDesc" xml:space="preserve">
-    <value>| Trafikstörningar ser du vägarbeten som har stor påverkan på de cykelbanor i Göteborg som trafikkontoret ansvarar för.
-Klicka på trafikstörningssymbolen för att läsa mer om arbetet samt hur framkomligheten för dig som cyklist påverkas.
-Det är bara de trafikstörningar som har stor påverkan på cykelbanorna i Göteborg som visas i appen. Informationen hämtas
-automatiskt och kan innehålla vissa avvikelser eller felaktigheter. Giltighetstiden avser den period som entreprenören har tillstånd att göra ingrepp som kan påverka cykeltrafiken. Tillståndet kan gälla en längre period än störningen pågår.</value>
+    <value>In Traffic disruptions you see road works that have great impact on the cycle paths in Gothenburg which the traffic office is responsible for. Click on the traffic disruption symbol to read more about the work and how the accessibility for you as a cyclist is affected. Only the traffic disruptions have great impact on the cycle paths in Gothenburg displayed in the app. The information is retrieved automatically and may contain certain deviations or inaccuracies. The period of validity refers to the period that the contractor has permission to intervene which can affect bicycle traffic. The condition can apply for a longer period than the disturbance is ongoing.</value>
   </data>
   <data name="TrafficDisruptions" xml:space="preserve">
-    <value>Trafikstörningar</value>
+    <value>Traffic Disruptions</value>
   </data>
   <data name="TrafficDisTitle" xml:space="preserve">
-    <value>Trafikstörningar</value>
+    <value>Traffic Disruptions</value>
   </data>
 </root>

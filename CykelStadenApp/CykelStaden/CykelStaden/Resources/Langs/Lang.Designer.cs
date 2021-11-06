@@ -22,7 +22,7 @@ namespace CykelStaden.Resources.Langs {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Lang {
+    public class Lang {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace CykelStaden.Resources.Langs {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CykelStaden.Resources.Langs.Lang", typeof(Lang).Assembly);
@@ -51,7 +51,7 @@ namespace CykelStaden.Resources.Langs {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,18 +61,151 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About App.
+        ///   Looks up a localized string similar to Om Appen.
         /// </summary>
-        internal static string About {
+        public static string About {
             get {
                 return ResourceManager.GetString("About", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Map.
+        ///   Looks up a localized string similar to Göteborgs Stad vill att så många som möjligt ska kunna använda den här appen. Tillgänglighetsredogörelsen beskriver hur
+        ///Cykelstaden uppfyller lagen om tillgänglighet till digital offentlig service, eventuella kända tillgänglighetsproblem och hur du kan rapportera brister till oss så att vi kan åtgärda dem. Här finns tillgänglighetsredogörelsen för Cykelstaden Kontaktuppgifter
+        ///Du kan kontakta Göteborgs Stad genom att
+        ///mejla till goteborg@goteborg.se eller ringa
+        ///031-365 00 00.
         /// </summary>
-        internal static string Map {
+        public static string AccessibilityRepDesc {
+            get {
+                return ResourceManager.GetString("AccessibilityRepDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tillgänglighetsredogörelse.
+        /// </summary>
+        public static string AccessibilityRepTitle {
+            get {
+                return ResourceManager.GetString("AccessibilityRepTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CYKELSTADEN.
+        /// </summary>
+        public static string AppName {
+            get {
+                return ResourceManager.GetString("AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version 2.0.0.
+        /// </summary>
+        public static string AppVersion {
+            get {
+                return ResourceManager.GetString("AppVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cykelstaden är framtagen av trafikkontoret i Göteborgs Stad för att förenkla cyklistens vardag. I Cykelstaden hittar du lånecyklarna Styr &amp; Ställ, cykelvägar, cykelparkeringar samt stadens alla offentliga cykelpumpar. Du kan även planera din resväg och anmäla skador, hinder eller andra defekter som du upptäckt på cykelbanan. Trafikstörningsfunktionen gör det möjligt
+        ///att se pågående vägarbeten som påverkar cykelbanor. Om du upptäckt ett fel i appen Cykelstaden anmäler du det genom
+        ///felanmälningsfunktionen..
+        /// </summary>
+        public static string BikeCityDesc {
+            get {
+                return ResourceManager.GetString("BikeCityDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cykelstaden.
+        /// </summary>
+        public static string BikeCityTitle {
+            get {
+                return ResourceManager.GetString("BikeCityTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cykelparkeringar.
+        /// </summary>
+        public static string BikeParking {
+            get {
+                return ResourceManager.GetString("BikeParking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cykelpumpar.
+        /// </summary>
+        public static string BikePumps {
+            get {
+                return ResourceManager.GetString("BikePumps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cyckelvägar.
+        /// </summary>
+        public static string BikeRoutes {
+            get {
+                return ResourceManager.GetString("BikeRoutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mörkt Läge.
+        /// </summary>
+        public static string DarkMode {
+            get {
+                return ResourceManager.GetString("DarkMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I felanmälningsformuläret kan du anmäla skador, defekter, hinder eller liknande som du upptäckt på cykelbanor inom Göteborg Stad. Felanmälan skicka till Göteborgs Stads kontaktcenter där ärendet skickas vidare till den handläggare som ansvarar för din fråga. När du skickar en fråga via felanmälningsformuläret registreras din fråga som en allmän handling i Göteborgs Stad. Allmänna handlingar är dokument som alla medborgare har tillgång till och rätt att begära ut och läsa.
+        ///Att din fråga blir en allmän handl [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string ErrorRepDesc {
+            get {
+                return ResourceManager.GetString("ErrorRepDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Felanmälan.
+        /// </summary>
+        public static string ErrorRepTitle {
+            get {
+                return ResourceManager.GetString("ErrorRepTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frågor &amp; Svar.
+        /// </summary>
+        public static string Faq {
+            get {
+                return ResourceManager.GetString("Faq", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Språk.
+        /// </summary>
+        public static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Karta.
+        /// </summary>
+        public static string Map {
             get {
                 return ResourceManager.GetString("Map", resourceCulture);
             }
@@ -81,18 +214,131 @@ namespace CykelStaden.Resources.Langs {
         /// <summary>
         ///   Looks up a localized string similar to Nextbike.
         /// </summary>
-        internal static string Nextbike {
+        public static string Nextbike {
             get {
                 return ResourceManager.GetString("Nextbike", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Settings.
+        ///   Looks up a localized string similar to Aviseringar.
         /// </summary>
-        internal static string Settings {
+        public static string Notifications {
+            get {
+                return ResourceManager.GetString("Notifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to När du använder appen samlas inga andra uppgifter in än de som du väljer att ange om du gör en felanmälan.
+        ///När du skickar in en felanmälan ska du ange en GPS-position för felet genom att ange en adress eller välja din aktuella position.
+        ///Felets position behövs för att felet ska kunna åtgärdas. Har du GPS:en påslagen används dessa uppgifter genom att du samtycker till att appen får använda din position. Du kan när som helst ta tillbaka ditt samtycke genom att välja att inte låta appen använda din position.  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string PersonalDataDesc {
+            get {
+                return ResourceManager.GetString("PersonalDataDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personuppgiftsbehandling.
+        /// </summary>
+        public static string PersonalDataTitle {
+            get {
+                return ResourceManager.GetString("PersonalDataTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personliga Inställningar.
+        /// </summary>
+        public static string PersonalSettings {
+            get {
+                return ResourceManager.GetString("PersonalSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Integritetspolicy.
+        /// </summary>
+        public static string PrivacyPolicy {
+            get {
+                return ResourceManager.GetString("PrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inställningar.
+        /// </summary>
+        public static string Settings {
             get {
                 return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Styr &amp; Ställ (Nextbike).
+        /// </summary>
+        public static string SteerSet {
+            get {
+                return ResourceManager.GetString("SteerSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I appen kan du se alla Styr &amp; Ställ-stationer samt antal lediga cyklar vid varje station. För att hyra en Styr &amp; Ställ-cykel, klicka på länken &quot;Till Styr &amp; Ställ (Nextbike)&quot; i menyn..
+        /// </summary>
+        public static string SteerSetDesc {
+            get {
+                return ResourceManager.GetString("SteerSetDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Styr &amp; Ställ.
+        /// </summary>
+        public static string SteerSetTitle {
+            get {
+                return ResourceManager.GetString("SteerSetTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hjälp &amp; Stöd.
+        /// </summary>
+        public static string Support {
+            get {
+                return ResourceManager.GetString("Support", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to | Trafikstörningar ser du vägarbeten som har stor påverkan på de cykelbanor i Göteborg som trafikkontoret ansvarar för.
+        ///Klicka på trafikstörningssymbolen för att läsa mer om arbetet samt hur framkomligheten för dig som cyklist påverkas.
+        ///Det är bara de trafikstörningar som har stor påverkan på cykelbanorna i Göteborg som visas i appen. Informationen hämtas
+        ///automatiskt och kan innehålla vissa avvikelser eller felaktigheter. Giltighetstiden avser den period som entreprenören har tillstånd att göra ingrepp s [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string TrafficDisDesc {
+            get {
+                return ResourceManager.GetString("TrafficDisDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trafikstörningar.
+        /// </summary>
+        public static string TrafficDisruptions {
+            get {
+                return ResourceManager.GetString("TrafficDisruptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trafikstörningar.
+        /// </summary>
+        public static string TrafficDisTitle {
+            get {
+                return ResourceManager.GetString("TrafficDisTitle", resourceCulture);
             }
         }
     }
