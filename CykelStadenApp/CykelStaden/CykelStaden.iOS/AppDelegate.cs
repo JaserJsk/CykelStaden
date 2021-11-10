@@ -6,9 +6,6 @@ using Syncfusion.XForms.iOS.Core;
 using Syncfusion.ListView.XForms.iOS;
 using Syncfusion.XForms.iOS.Graphics;
 using Syncfusion.XForms.iOS.Buttons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 using Foundation;
 using UIKit;
@@ -46,6 +43,28 @@ namespace CykelStaden.iOS
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+
+        public override void OnActivated(UIApplication uiApplication)
+        {
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
+            {
+                // If VS has updated to the latest version , you can use StatusBarManager , else use the first line code
+                // UIView statusBar = new UIView(UIApplication.SharedApplication.StatusBarFrame);
+                UIView statusBar = new UIView(UIApplication.SharedApplication.KeyWindow.WindowScene.StatusBarManager.StatusBarFrame);
+                statusBar.BackgroundColor = UIColor.FromRGB(62, 148, 255); // Same as #3E94FF
+                UIApplication.SharedApplication.KeyWindow.AddSubview(statusBar);
+            }
+            else
+            {
+                UIView statusBar = UIApplication.SharedApplication.ValueForKey(new NSString("statusBar")) as UIView;
+                if (statusBar.RespondsToSelector(new ObjCRuntime.Selector("setBackgroundColor:")))
+                {
+                    statusBar.BackgroundColor = UIColor.FromRGB(62, 148, 255); // Same as #3E94FF
+                    UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.BlackOpaque;
+                }
+            }
+            base.OnActivated(uiApplication);
         }
     }
 }

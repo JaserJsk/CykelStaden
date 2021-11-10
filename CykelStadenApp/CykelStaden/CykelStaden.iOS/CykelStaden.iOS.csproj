@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\ViewCellItemSelectedCustomRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +127,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.2.0.534</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
       <Version>19.3.0.48</Version>
     </PackageReference>
@@ -155,7 +159,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\user.jpg" />
+    <BundleResource Include="Resources\User.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\LogoLight.png" />
@@ -164,6 +168,7 @@
     <BundleResource Include="Resources\LogoDark.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\header.jpg" />
+    <BundleResource Include="Resources\Header.jpg" />
   </ItemGroup>
+  <ItemGroup />
 </Project>

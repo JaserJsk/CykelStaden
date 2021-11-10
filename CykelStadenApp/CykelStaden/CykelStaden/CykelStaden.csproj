@@ -11,7 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Data\about.json" />
     <None Remove="Resources\Fonts\MaterialIcons-Regular.ttf" />
     <None Remove="Resources\Fonts\MaterialIconsOutlined-Regular.otf" />
     <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
@@ -22,8 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Data\about.json" />
-    <EmbeddedResource Include="Data\about.json" />
     <EmbeddedResource Include="Resources\Fonts\MaterialIcons-Regular.ttf" />
     <EmbeddedResource Include="Resources\Fonts\MaterialIconsOutlined-Regular.otf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Bold.ttf" />
@@ -34,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.534" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.3.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.3.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="19.3.0.48" />
@@ -54,9 +52,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Lang.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Views\DrawerPage.xaml.cs">
-      <DependentUpon>DrawerPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -135,15 +130,8 @@
     <EmbeddedResource Update="Views\AboutPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\DrawerPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\SettingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\Images\" />
   </ItemGroup>
 </Project>

@@ -134,7 +134,7 @@ mejla till goteborg@goteborg.se eller ringa
     <value>CYKELSTADEN</value>
   </data>
   <data name="AppVersion" xml:space="preserve">
-    <value>Version 2.0.0</value>
+    <value>Version 1.0.6</value>
   </data>
   <data name="BikeCityDesc" xml:space="preserve">
     <value>Cykelstaden är framtagen av trafikkontoret i Göteborgs Stad för att förenkla cyklistens vardag. I Cykelstaden hittar du lånecyklarna Styr &amp; Ställ, cykelvägar, cykelparkeringar samt stadens alla offentliga cykelpumpar. Du kan även planera din resväg och anmäla skador, hinder eller andra defekter som du upptäckt på cykelbanan. Trafikstörningsfunktionen gör det möjligt
@@ -144,7 +144,7 @@ felanmälningsfunktionen.</value>
   <data name="BikeCityTitle" xml:space="preserve">
     <value>Cykelstaden</value>
   </data>
-  <data name="BikeParking" xml:space="preserve">
+  <data name="BikeParkings" xml:space="preserve">
     <value>Cykelparkeringar</value>
   </data>
   <data name="BikePumps" xml:space="preserve">
@@ -153,19 +153,40 @@ felanmälningsfunktionen.</value>
   <data name="BikeRoutes" xml:space="preserve">
     <value>Cyckelvägar</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="ChangeLang" xml:space="preserve">
+    <value>Ändra Språk</value>
+  </data>
   <data name="DarkMode" xml:space="preserve">
     <value>Mörkt Läge</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Klar</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Engelska</value>
   </data>
   <data name="ErrorRepDesc" xml:space="preserve">
     <value>I felanmälningsformuläret kan du anmäla skador, defekter, hinder eller liknande som du upptäckt på cykelbanor inom Göteborg Stad. Felanmälan skicka till Göteborgs Stads kontaktcenter där ärendet skickas vidare till den handläggare som ansvarar för din fråga. När du skickar en fråga via felanmälningsformuläret registreras din fråga som en allmän handling i Göteborgs Stad. Allmänna handlingar är dokument som alla medborgare har tillgång till och rätt att begära ut och läsa.
 Att din fråga blir en allmän handling beror på att vi i Sverige har en offentlighetsprincip som ger alla medborgare rätt till insyn i
 kommunens arbete.</value>
   </data>
+  <data name="ErrorReport" xml:space="preserve">
+    <value>Rapportera Fel</value>
+  </data>
   <data name="ErrorRepTitle" xml:space="preserve">
     <value>Felanmälan</value>
   </data>
   <data name="Faq" xml:space="preserve">
     <value>Frågor &amp; Svar</value>
+  </data>
+  <data name="LangChanged" xml:space="preserve">
+    <value>Språk Ändrat</value>
+  </data>
+  <data name="LangChangedDesc" xml:space="preserve">
+    <value>Du har ändrat språk!</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>Språk</value>
@@ -194,6 +215,9 @@ underlätta för dig som användare. Läs om hur trafikkontoret behandlar dina p
   <data name="PrivacyPolicy" xml:space="preserve">
     <value>Integritetspolicy</value>
   </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>Välj Språk</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Inställningar</value>
   </data>
@@ -208,6 +232,9 @@ underlätta för dig som användare. Läs om hur trafikkontoret behandlar dina p
   </data>
   <data name="Support" xml:space="preserve">
     <value>Hjälp &amp; Stöd</value>
+  </data>
+  <data name="Swedish" xml:space="preserve">
+    <value>Svenska</value>
   </data>
   <data name="TrafficDisDesc" xml:space="preserve">
     <value>| Trafikstörningar ser du vägarbeten som har stor påverkan på de cykelbanor i Göteborg som trafikkontoret ansvarar för.

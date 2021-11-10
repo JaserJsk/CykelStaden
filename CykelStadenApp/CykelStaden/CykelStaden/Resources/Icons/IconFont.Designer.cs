@@ -115,15 +115,6 @@ namespace CykelStaden.Resources.Icons {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to language.
-        /// </summary>
-        public static string Language {
-            get {
-                return ResourceManager.GetString("Language", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to local_gas_station.
         /// </summary>
         public static string LocalGasStation {
@@ -147,6 +138,15 @@ namespace CykelStaden.Resources.Icons {
         public static string LocationOn {
             get {
                 return ResourceManager.GetString("LocationOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to menu.
+        /// </summary>
+        public static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
             }
         }
         
@@ -178,6 +178,24 @@ namespace CykelStaden.Resources.Icons {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to report.
+        /// </summary>
+        public static string Report {
+            get {
+                return ResourceManager.GetString("Report", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to settings.
         /// </summary>
         public static string Settings {
@@ -192,6 +210,15 @@ namespace CykelStaden.Resources.Icons {
         public static string Traffic {
             get {
                 return ResourceManager.GetString("Traffic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to translate.
+        /// </summary>
+        public static string Translate {
+            get {
+                return ResourceManager.GetString("Translate", resourceCulture);
             }
         }
     }

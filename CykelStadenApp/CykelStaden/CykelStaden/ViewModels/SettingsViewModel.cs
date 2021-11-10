@@ -1,151 +1,214 @@
-﻿using Xamarin.Forms;
+﻿using Acr.UserDialogs;
+using CykelStaden.Helpers;
+using CykelStaden.Models;
+using CykelStaden.Resources.Langs;
+using CykelStaden.Views;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Globalization;
+using System.Linq;
+using System.Windows.Input;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace CykelStaden.ViewModels
 {
     /// <summary>
-    /// ViewModel for Setting page 
-    /// </summary> 
+    /// ViewModel for Setting page.
+    /// </summary>
     [Preserve(AllMembers = true)]
     public class SettingsViewModel : BaseViewModel
     {
+        #region Fields
+
+        /// <summary>
+        /// Defines the PickerWidth.
+        /// </summary>
+        public static double PickerWidth = DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density * 0.8;
+
+        /// <summary>
+        /// Defines the toggleTheme.
+        /// </summary>
+        private bool toggleTheme;
+
+        /// <summary>
+        /// Defines the isLightTheme.
+        /// </summary>
+        private bool isLightTheme = true;
+
+        #endregion
+
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SettingsViewModel" /> class
+        /// Initializes a new instance of the <see cref="SettingsViewModel"/> class.
         /// </summary>
         public SettingsViewModel()
         {
-            this.EditProfileCommand = new Command(this.EditProfileClicked);
-            this.ChangePasswordCommand = new Command(this.ChangePasswordClicked);
-            this.LinkAccountCommand = new Command(this.LinkAccountClicked);
-            this.HelpCommand = new Command(this.HelpClicked);
-            this.TermsCommand = new Command(this.TermsServiceClicked);
-            this.PolicyCommand = new Command(this.PrivacyPolicyClicked);
+            LoadLanguages();
+            ChangeLangugeCommand = new Command(async () =>
+            {
+                LocalizationResourceManager.Instance.SetCulture(CultureInfo.GetCultureInfo(SelectedLanguage.LangCI));
+                LoadLanguages();
+
+                await UserDialogs.Instance.AlertAsync(Lang.LangChangedDesc, Lang.LangChanged, Lang.Done);
+            });
+
+            this.AboutCommand = new Command(this.AboutClicked);
+            this.SteerSetCommand = new Command(this.SteerSetClicked);
+            this.PrivacyPolicyCommand = new Command(this.PrivacyPolicyClicked);
             this.FAQCommand = new Command(this.FAQClicked);
-            this.LogoutCommand = new Command(this.LogoutClicked);
         }
 
         #endregion
 
-        #region Commands
+        #region Properties
 
         /// <summary>
-        /// Gets or sets the command is executed when the edit profile option is clicked.
+        /// Gets or sets the languagesModel.
         /// </summary>
-        public Command EditProfileCommand { get; set; }
+        public ObservableCollection<LanguageModel> languagesModel { get; set; }
 
         /// <summary>
-        /// Gets or sets the command is executed when the change password option is clicked.
+        /// Gets or sets the SelectedLanguage.
         /// </summary>
-        public Command ChangePasswordCommand { get; set; }
+        public LanguageModel SelectedLanguage { get; set; }
 
         /// <summary>
-        /// Gets or sets the command is executed when the account link option is clicked.
+        /// Gets or sets a value indicating whether ToggleTheme
+        /// Gets or sets the theme of the app..
         /// </summary>
-        public Command LinkAccountCommand { get; set; }
+        public bool ToggleTheme
+        {
+            get
+            {
+                return toggleTheme;
+            }
+            set
+            {
+                toggleTheme = value;
+                OnToggleTheme();
+            }
+        }
 
         /// <summary>
-        /// Gets or sets the command is executed when the help option is clicked.
+        /// Gets or sets the command is executed when the change languge option is clicked..
         /// </summary>
-        public Command HelpCommand { get; set; }
+        public ICommand ChangeLangugeCommand { get; set; }
 
         /// <summary>
-        /// Gets or sets the command is executed when the terms of service option is clicked.
+        /// Gets or sets the command is executed when the about option is clicked..
         /// </summary>
-        public Command TermsCommand { get; set; }
+        public Command AboutCommand { get; set; }
 
         /// <summary>
-        /// Gets or sets the command is executed when the privacy policy option is clicked.
+        /// Gets or sets the command is executed when the steer & set option is clicked..
         /// </summary>
-        public Command PolicyCommand { get; set; }
+        public Command SteerSetCommand { get; set; }
 
         /// <summary>
-        /// Gets or sets the command is executed when the FAQ option is clicked.
+        /// Gets or sets the command is executed when the privacy & policy option is clicked..
+        /// </summary>
+        public Command PrivacyPolicyCommand { get; set; }
+
+        /// <summary>
+        /// Gets or sets the command is executed when the FAQ option is clicked..
         /// </summary>
         public Command FAQCommand { get; set; }
-
-        /// <summary>
-        /// Gets or sets the command is executed when the logout is clicked.
-        /// </summary>
-        public Command LogoutCommand { get; set; }
 
         #endregion
 
         #region Methods
 
         /// <summary>
-        /// Invoked when the edit profile option clicked
+        /// Invoked when the theme option is switched.
         /// </summary>
-        /// <param name="obj">The object</param>
-        private void EditProfileClicked(object obj)
+        private void OnToggleTheme()
         {
-            // Do something
+            if (isLightTheme)
+            {
+                ICollection<ResourceDictionary> mergedDictionaries = App.Current.Resources.MergedDictionaries;
+                var lightTheme = mergedDictionaries.OfType<Themes.LightTheme>().FirstOrDefault();
+                if (lightTheme != null)
+                {
+                    mergedDictionaries.Remove(lightTheme);
+                }
+
+                mergedDictionaries.Add(new Themes.DarkTheme());
+
+                // This is needed to update the background color of a listview
+                App.Current.SetDynamicResource(ListView.BackgroundColorProperty, "Gray-ListView-Bg");
+                App.Current.Resources["Gray-ListView-Bg"] = Color.FromHex("#2F343C");
+
+                isLightTheme = false;
+            }
+            else
+            {
+                ICollection<ResourceDictionary> mergedDictionaries = App.Current.Resources.MergedDictionaries;
+                var darkTheme = mergedDictionaries.OfType<Themes.DarkTheme>().FirstOrDefault();
+                if (darkTheme != null)
+                {
+                    mergedDictionaries.Remove(darkTheme);
+                }
+
+                mergedDictionaries.Add(new Themes.LightTheme());
+
+                // This is needed to update the background color of a listview
+                App.Current.SetDynamicResource(ListView.BackgroundColorProperty, "Gray-ListView-Bg");
+                App.Current.Resources["Gray-ListView-Bg"] = Color.FromHex("#ffffff");
+
+                isLightTheme = true;
+            }
         }
 
         /// <summary>
-        /// Invoked when the change password clicked
+        /// Loading all available languages at runtime.
         /// </summary>
-        /// <param name="obj">The object</param>
-        private void ChangePasswordClicked(object obj)
+        private void LoadLanguages()
         {
-            // Do something
+            languagesModel = new ObservableCollection<LanguageModel>()
+            {
+                {new LanguageModel(Lang.Swedish, "se") },
+                {new LanguageModel(Lang.English, "en") },
+            };
+            SelectedLanguage = languagesModel.FirstOrDefault(pro => pro.LangCI == LocalizationResourceManager.Instance.CurrentCulture.TwoLetterISOLanguageName);
         }
 
         /// <summary>
-        /// Invoked when the account link clicked
+        /// Invoked when the about option clicked.
         /// </summary>
-        /// <param name="obj">The object</param>
-        private void LinkAccountClicked(object obj)
+        /// <param name="obj">The object.</param>
+        private async void AboutClicked(object obj)
         {
-            // Do something
+            await App.Current.MainPage.Navigation.PushAsync(new AboutPage());
         }
 
         /// <summary>
-        /// Invoked when the terms of service clicked
+        /// Invoked when the steer & set clicked.
         /// </summary>
-        /// <param name="obj">The object</param>
-        private void TermsServiceClicked(object obj)
+        /// <param name="obj">The object.</param>
+        private void SteerSetClicked(object obj)
         {
-            // Do something
         }
 
         /// <summary>
-        /// Invoked when the privacy and policy clicked
+        /// Invoked when the privacy and policy clicked.
         /// </summary>
-        /// <param name="obj">The object</param>
+        /// <param name="obj">The object.</param>
         private void PrivacyPolicyClicked(object obj)
         {
-            // Do something
         }
 
         /// <summary>
-        /// Invoked when the FAQ clicked
+        /// Invoked when the FAQ clicked.
         /// </summary>
-        /// <param name="obj">The object</param>
+        /// <param name="obj">The object.</param>
         private void FAQClicked(object obj)
         {
-            // Do something
-        }
-
-        /// <summary>
-        /// Invoked when the help option is clicked
-        /// </summary>
-        /// <param name="obj">The object</param>
-        private void HelpClicked(object obj)
-        {
-            // Do something
-        }
-
-        /// <summary>
-        /// Invoked when the logout button is clicked
-        /// </summary>
-        /// <param name="obj">The object</param>
-        private void LogoutClicked(object obj)
-        {
-            // Do something
         }
 
         #endregion
+
     }
 }

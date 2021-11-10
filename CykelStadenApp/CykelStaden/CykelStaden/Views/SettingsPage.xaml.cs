@@ -1,4 +1,4 @@
-﻿using Xamarin.Forms;
+﻿using CykelStaden.ViewModels;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
@@ -12,11 +12,12 @@ namespace CykelStaden.Views
     public partial class SettingsPage
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SettingsPage" /> class.
+        /// Initializes a new instance of the <see cref="SettingsPage"/> class.
         /// </summary>
         public SettingsPage()
         {
             this.InitializeComponent();
+            BindingContext = new SettingsViewModel();
         }
     }
 }

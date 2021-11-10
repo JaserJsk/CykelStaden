@@ -105,13 +105,15 @@ namespace CykelStaden.Controls
         private static async void OnTapped(BindableObject bindable, object oldValue, object newValue)
         {
             var grid = (TapAnimationGrid)bindable;
-            Application.Current.Resources.TryGetValue("Gray-100", out var retVal);
-            grid.BackgroundColor = (Color)retVal;
+
+            //Application.Current.Resources.TryGetValue("Gray-100", out var retVal);
+            //grid.BackgroundColor = (Color)retVal;
 
             // To make the selected item color changes for 100 milliseconds.
             await Task.Delay(100).ConfigureAwait(true);
-            Application.Current.Resources.TryGetValue("Gray-Bg", out var retValue);
-            grid.BackgroundColor = (Color)retValue;
+
+            //Application.Current.Resources.TryGetValue("Gray-Bg", out var retValue);
+            //grid.BackgroundColor = (Color)retValue;
         }
 
         /// <summary>

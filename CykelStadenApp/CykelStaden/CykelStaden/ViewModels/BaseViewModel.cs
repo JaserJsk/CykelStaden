@@ -14,25 +14,18 @@ namespace CykelStaden.ViewModels
     [DataContract]
     public class BaseViewModel : INotifyPropertyChanged
     {
-        #region Fields
-
+        /// <summary>
+        /// Defines the backButtonCommand.
+        /// </summary>
         private Command<object> backButtonCommand;
-
-        #endregion
-
-        #region Event handler
 
         /// <summary>
         /// Occurs when the property is changed.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        #endregion
-
-        #region Commands
-
         /// <summary>
-        /// Gets the command that will be executed when an item is selected.
+        /// Gets the command that will be executed when an item is selected..
         /// </summary>
         public Command<object> BackButtonCommand
         {
@@ -42,19 +35,23 @@ namespace CykelStaden.ViewModels
             }
         }
 
-        #endregion
-
-        #region Methods
-
         /// <summary>
         /// The PropertyChanged event occurs when changing the value of property.
         /// </summary>
-        /// <param name="propertyName">The PropertyName</param>
+        /// <param name="propertyName">The PropertyName.</param>
         protected void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        /// <summary>
+        /// The SetProperty.
+        /// </summary>
+        /// <typeparam name="T">.</typeparam>
+        /// <param name="storage">The storage<see cref="T"/>.</param>
+        /// <param name="value">The value<see cref="T"/>.</param>
+        /// <param name="propertyName">The propertyName<see cref="string"/>.</param>
+        /// <returns>The <see cref="bool"/>.</returns>
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
         {
             if (EqualityComparer<T>.Default.Equals(storage, value))
@@ -71,7 +68,7 @@ namespace CykelStaden.ViewModels
         /// <summary>
         /// Invoked when an back button is clicked.
         /// </summary>
-        /// <param name="obj">The Object</param>
+        /// <param name="obj">The Object.</param>
         private void BackButtonClicked(object obj)
         {
             if (Device.RuntimePlatform == Device.UWP && Application.Current.MainPage.Navigation.NavigationStack.Count > 1)
@@ -83,7 +80,5 @@ namespace CykelStaden.ViewModels
                 Application.Current.MainPage.Navigation.PopAsync();
             }
         }
-
-        #endregion
     }
 }

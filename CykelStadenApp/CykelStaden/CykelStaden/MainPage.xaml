@@ -1,24 +1,186 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage x:Class="CykelStaden.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CykelStaden.MainPage">
+             xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assembly=Syncfusion.SfNavigationDrawer.XForms"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:local="clr-namespace:CykelStaden"
+             xmlns:views="clr-namespace:CykelStaden.Views"
+             xmlns:helpers="clr-namespace:CykelStaden.Helpers"
+             xmlns:iconFonts="clr-namespace:CykelStaden.Resources.Icons"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{DynamicResource Gray-Bg}">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer"
+                                         DrawerHeaderHeight="{Binding Source={x:Static local:MainPage.DrawerHeaderHeight}}"
+                                         DrawerFooterHeight="{Binding Source={x:Static local:MainPage.DrawerFooterHeight}}">
+        <navigationdrawer:SfNavigationDrawer.ContentView>
+
+
+            <Grid x:Name="mainContentView">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackLayout x:Name="drawerNavBar" 
+                             HeightRequest="56"
+                             Orientation="Horizontal"
+                             BackgroundColor="{DynamicResource PrimaryColor}">
+
+                    <button:SfButton x:Name="menuButton" 
+                                     HeightRequest="50" 
+                                     WidthRequest="50" 
+                                     HorizontalOptions="Start" 
+                                     FontSize="25"
+                                     FontFamily="Material-Outlined"
+                                     Style="{StaticResource IconButtonStyle}"
+                                     Text="{x:Static iconFonts:IconFont.Menu}"
+                                     TextColor="{DynamicResource Gray-White}"
+                                     Clicked="menuButton_Clicked"/>
+
+                    <Label x:Name="headerLabel" 
+                           HeightRequest="50" 
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" 
+                           Text="{helpers:Translate AppName}" 
+                           FontSize="16" 
+                           TextColor="{DynamicResource Gray-White}" />
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" x:Name="ContentSection" Margin="0,-6,0,0">
+
+                    <views:SettingsPage x:Name="settingsPage" IsVisible="False"/>
+
+                </StackLayout>
+
+            </Grid>
+
+        </navigationdrawer:SfNavigationDrawer.ContentView>
+
+        <!--  **************************************************************  -->
+        <!--  Drawer Header  -->
+        <navigationdrawer:SfNavigationDrawer.DrawerHeaderView>
+            <Grid BackgroundColor="{DynamicResource Gray-Bg}">
+
+                <Image HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       Aspect="AspectFill">
+                    <Image.Source>
+                        <FileImageSource File="{DynamicResource HeaderBanner}"  />
+                    </Image.Source>
+                </Image>
+
+                <border:SfBorder HorizontalOptions="Start"
+                                 VerticalOptions="Start"
+                                 Margin="16,16,0,0"
+                                 CornerRadius="50"
+                                 WidthRequest="72"
+                                 HeightRequest="72"
+                                 BackgroundColor="{DynamicResource Gray-100}">
+
+                    <Image Aspect="AspectFill">
+                        <Image.Source>
+                            <FileImageSource File="{DynamicResource UserImg}"  />
+                        </Image.Source>
+                    </Image>
+
+                </border:SfBorder>
+                <StackLayout HorizontalOptions="Start"
+                             VerticalOptions="End"
+                             Margin="16,0,0,16">
+
+                    <Label HorizontalTextAlignment="Start"
+                           HorizontalOptions="Start"
+                           Text="John Doe"
+                           FontSize="20" 
+                           TextColor="{DynamicResource Gray-White}"/>
+
+                    <Label HorizontalTextAlignment="Start" 
+                           HorizontalOptions="Start"
+                           Text="john.doe@gmail.com"
+                           FontSize="12" 
+                           TextColor="{DynamicResource Gray-White}"/>
+                </StackLayout>
+            </Grid>
+        </navigationdrawer:SfNavigationDrawer.DrawerHeaderView>
+
+        <!--  **************************************************************  -->
+        <!--  Drawer Content  -->
+        <navigationdrawer:SfNavigationDrawer.DrawerContentView>
+
+            <StackLayout BackgroundColor="{DynamicResource Gray-Bg}">
+
+                <ScrollView>
+                    <ListView x:Name="listView"
+                              SelectionMode="Single"
+                              RowHeight="70"
+                              ItemSelected="listView_ItemSelected"
+                              SeparatorColor="Transparent"
+                              BackgroundColor="{DynamicResource Gray-ListView-Bg}">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:Name="dataTemplate">
+                                <ViewCell x:Name="cellName">
+                                    <StackLayout Margin="32,10,0,0" 
+                                                 VerticalOptions="Center">
+
+                                        <Grid RowDefinitions="1*, Auto">
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label Grid.Row="0"
+                                                   Grid.Column="0" 
+                                                   HorizontalTextAlignment="Start"
+                                                   HorizontalOptions="Start"
+                                                   FontSize="25"
+                                                   TextColor="{DynamicResource Gray-900}"
+                                                   Text="{Binding ItemIcon}"
+                                                   FontFamily="Material-Outlined"
+                                                   Style="{StaticResource IconLabelStyle}"/>
+
+                                            <Label Grid.Row="0"
+                                                   Grid.Column="1"
+                                                   Margin="10,0,0,0"
+                                                   FontSize="16"
+                                                   TextColor="{DynamicResource Gray-900}"
+                                                   Text="{Binding ItemName}"
+                                                   FontFamily="Material"
+                                                   HorizontalTextAlignment="Start"
+                                                   HorizontalOptions="Start"/>
+
+                                        </Grid>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+            </StackLayout>
+        </navigationdrawer:SfNavigationDrawer.DrawerContentView>
+
+        <!--  **************************************************************  -->
+        <!--  Drawer Footer  -->
+        <navigationdrawer:SfNavigationDrawer.DrawerFooterView>
+
+            <StackLayout BackgroundColor="{DynamicResource Gray-Bg}">
+                <Image HeightRequest="80"
+                       VerticalOptions="Start">
+                    <Image.Source>
+                        <FileImageSource File="{DynamicResource CompanyLogo}"  />
+                    </Image.Source>
+                </Image>
+            </StackLayout>
+
+        </navigationdrawer:SfNavigationDrawer.DrawerFooterView>
+
+    </navigationdrawer:SfNavigationDrawer>
 
 </ContentPage>

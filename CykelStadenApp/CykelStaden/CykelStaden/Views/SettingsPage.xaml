@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView
     x:Class="CykelStaden.Views.SettingsPage"
+    xmlns:local="clr-namespace:CykelStaden.ViewModels"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:langs="clr-namespace:CykelStaden.Resources.Langs"
+    xmlns:helpers="clr-namespace:CykelStaden.Helpers"
     xmlns:iconFonts="clr-namespace:CykelStaden.Resources.Icons"
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
     xmlns:controls="clr-namespace:CykelStaden.Controls"
-    NavigationPage.HasNavigationBar="False"
-    BackgroundColor="{DynamicResource Gray-100}">
+    xmlns:viewmodels="clr-namespace:CykelStaden.ViewModels"
+    x:DataType="viewmodels:SettingsViewModel">
 
     <ContentView.Content>
         <ScrollView>
-            <StackLayout BackgroundColor="{DynamicResource Gray-100}" Spacing="0" Padding="0,0,0,16">
+            <StackLayout BackgroundColor="{DynamicResource Gray-100}" Spacing="0" Padding="0">
 
                 <!--  **************************************************************  -->
                 <!--  Header label for setting  -->
@@ -23,7 +24,7 @@
                     HorizontalOptions="FillAndExpand"
                     LineHeight="{OnPlatform Default=-1,
                                             Android=1.25}"
-                    Text="{x:Static langs:Lang.Settings}"
+                    Text="{helpers:Translate Settings}"
                     TextColor="{DynamicResource Gray-800}"
                     VerticalOptions="Center"
                     VerticalTextAlignment="Center" />
@@ -49,7 +50,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.BikeRoutes}"
+                        Text="{helpers:Translate BikeRoutes}"
                         VerticalOptions="Center" />
                     <!--  BikeRoutes switch  -->
                     <buttons:SfSwitch
@@ -114,7 +115,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.BikePumps}"
+                        Text="{helpers:Translate BikePumps}"
                         VerticalOptions="Center" />
                     <!--  BikePumps switch  -->
                     <buttons:SfSwitch
@@ -179,7 +180,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.BikeParking}"
+                        Text="{helpers:Translate BikeParkings}"
                         VerticalOptions="Center" />
                     <!--  BikeParking switch  -->
                     <buttons:SfSwitch
@@ -244,7 +245,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.TrafficDisruptions}"
+                        Text="{helpers:Translate TrafficDisruptions}"
                         VerticalOptions="Center" />
                     <!--  TrafficDisruptions switch  -->
                     <buttons:SfSwitch
@@ -309,7 +310,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.Nextbike}"
+                        Text="{helpers:Translate Nextbike}"
                         VerticalOptions="Center" />
                     <!--  Nextbike switch  -->
                     <buttons:SfSwitch
@@ -362,7 +363,7 @@
                     HorizontalOptions="FillAndExpand"
                     LineHeight="{OnPlatform Default=-1,
                                             Android=1.25}"
-                    Text="{x:Static langs:Lang.PersonalSettings}"
+                    Text="{helpers:Translate PersonalSettings}"
                     TextColor="{DynamicResource Gray-800}"
                     VerticalOptions="Center"
                     VerticalTextAlignment="Center" />
@@ -388,7 +389,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.Notifications}"
+                        Text="{helpers:Translate Notifications}"
                         VerticalOptions="Center" />
                     <!--  Notifications switch  -->
                     <buttons:SfSwitch
@@ -431,8 +432,6 @@
                         </VisualStateManager.VisualStateGroups>
                     </buttons:SfSwitch>
                 </Grid>
-                <BoxView Style="{StaticResource HorizontalSeparatorStyle}" />
-
                 <!--  Grid for DarkMode and switch  -->
                 <Grid
                     BackgroundColor="{DynamicResource Gray-Bg}"
@@ -454,14 +453,16 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.DarkMode}"
+                        Text="{helpers:Translate DarkMode}"
                         VerticalOptions="Center" />
                     <!--  DarkMode switch  -->
                     <buttons:SfSwitch
+                        x:Name="sfSwitch"
                         Grid.Column="2"
                         Margin="8,0"
                         AllowIndeterminateState="False"
                         HeightRequest="28"
+                        IsOn="{Binding ToggleTheme, Mode=TwoWay}"
                         VisualType="Cupertino">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -497,7 +498,6 @@
                         </VisualStateManager.VisualStateGroups>
                     </buttons:SfSwitch>
                 </Grid>
-                <BoxView Style="{StaticResource HorizontalSeparatorStyle}" />
 
                 <!--  Grid for Language and dropdown  -->
                 <Grid
@@ -512,61 +512,39 @@
                         Margin="16,0,0,0"
                         FontFamily="Material-Outlined"
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{x:Static iconFonts:IconFont.Language}" />
-                    <!--  Language label  -->
-                    <Label
-                        Grid.Column="1"
-                        Margin="16,12"
-                        FontFamily="Montserrat-Medium"
-                        HorizontalOptions="Start"
-                        Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.Language}"
-                        VerticalOptions="Center" />
-                    
-                    <!--  Language switch  -->
-                    <buttons:SfSwitch
-                        Grid.Column="2"
-                        Margin="8,0"
-                        AllowIndeterminateState="False"
-                        HeightRequest="28"
-                        VisualType="Cupertino">
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="On">
-                                    <VisualState.Setters>
-                                        <Setter Property="SwitchSettings">
-                                            <Setter.Value>
-                                                <buttons:CupertinoSwitchSettings
-                                                    x:TypeArguments="buttons:OnState"
-                                                    ThumbBorderColor="{DynamicResource Gray-White}"
-                                                    ThumbColor="{DynamicResource Gray-White}"
-                                                    TrackBorderColor="{DynamicResource Gray-200}"
-                                                    TrackColor="{DynamicResource PrimaryColor}" />
-                                            </Setter.Value>
-                                        </Setter>
-                                    </VisualState.Setters>
-                                </VisualState>
-                                <VisualState x:Name="Off">
-                                    <VisualState.Setters>
-                                        <Setter Property="SwitchSettings">
-                                            <Setter.Value>
-                                                <buttons:CupertinoSwitchSettings
-                                                    x:TypeArguments="buttons:OffState"
-                                                    ThumbBorderColor="{DynamicResource Gray-300}"
-                                                    ThumbColor="{DynamicResource Gray-White}"
-                                                    TrackBorderColor="{DynamicResource Gray-300}"
-                                                    TrackColor="{DynamicResource Gray-300}" />
-                                            </Setter.Value>
-                                        </Setter>
-                                    </VisualState.Setters>
-                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                    </buttons:SfSwitch>
-                    
+                        Text="{x:Static iconFonts:IconFont.Translate}" />
+
+                    <!--  Language Picker  -->
+                    <Picker x:Name="picker"
+                            Grid.Column="1"
+                            Margin="16,12"
+                            FontFamily="Montserrat-Medium"
+                            HorizontalOptions="Start" 
+                            VerticalOptions="Start"
+                            HeightRequest="40"
+                            Title="{helpers:Translate ChangeLang}"
+                            BackgroundColor="{DynamicResource Gray-Bg}"
+                            TextColor="{DynamicResource Gray-900}"
+                            WidthRequest="{Binding Source={x:Static local:SettingsViewModel.PickerWidth}}"
+                            ItemsSource="{Binding languagesModel}"
+                            ItemDisplayBinding="{Binding LangName}"
+                            SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}"/>
+                    <!--  Language Picker  -->
+
+                    <!--  Save Selected Lang  -->
+                    <Label Grid.Column="2"
+                            Margin="16,8,20,8"
+                            FontSize="30"
+                            FontFamily="Material-Outlined"
+                            Style="{StaticResource IconLabelStyle}"
+                            Text="{x:Static iconFonts:IconFont.Save}">
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ChangeLangugeCommand, Mode=OneTime}" />
+                        </Label.GestureRecognizers>
+                    </Label>
                 </Grid>
-                <BoxView Style="{StaticResource HorizontalSeparatorStyle}" />
-                
+
                 <!--  **************************************************************  -->
                 <!--  Header label for Support setting  -->
                 <Label
@@ -576,7 +554,7 @@
                     HorizontalOptions="FillAndExpand"
                     LineHeight="{OnPlatform Default=-1,
                                             Android=1.25}"
-                    Text="{x:Static langs:Lang.Support}"
+                    Text="{helpers:Translate Support}"
                     TextColor="{DynamicResource Gray-800}"
                     VerticalOptions="Center"
                     VerticalTextAlignment="Center" />
@@ -586,7 +564,7 @@
                     BackgroundColor="{DynamicResource Gray-Bg}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
-                    Command="{Binding HelpCommand}"
+                    Command="{Binding AboutCommand}"
                     RowSpacing="0"
                     Tapped="False">
 
@@ -604,7 +582,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.About}"
+                        Text="{helpers:Translate About}"
                         VerticalOptions="Center" />
                     <!--  Navigation icon  -->
                     <Label
@@ -616,12 +594,12 @@
                 </controls:TapAnimationGrid>
                 <BoxView Style="{StaticResource HorizontalSeparatorStyle}" />
 
-                <!--  Grid for Nextbike label and navigation bar icon  -->
+                <!--  Grid for Steer & Set label and navigation bar icon  -->
                 <controls:TapAnimationGrid
                     BackgroundColor="{DynamicResource Gray-Bg}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
-                    Command="{Binding TermsCommand}"
+                    Command="{Binding SteerSetCommand}"
                     RowSpacing="0"
                     Tapped="False">
 
@@ -639,7 +617,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.SteerSet}"
+                        Text="{helpers:Translate SteerSet}"
                         VerticalOptions="Center" />
                     <!--  Navigation icon  -->
                     <Label
@@ -651,12 +629,12 @@
                 </controls:TapAnimationGrid>
                 <BoxView Style="{StaticResource HorizontalSeparatorStyle}" />
 
-                <!--  Grid for Privacy policy label and navigation bar icon  -->
+                <!--  Grid for Privacy Policy label and navigation bar icon  -->
                 <controls:TapAnimationGrid
                     BackgroundColor="{DynamicResource Gray-Bg}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
-                    Command="{Binding PolicyCommand}"
+                    Command="{Binding PrivacyPolicyCommand}"
                     RowSpacing="0"
                     Tapped="False">
 
@@ -674,7 +652,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.PrivacyPolicy}"
+                        Text="{helpers:Translate PrivacyPolicy}"
                         VerticalOptions="Center" />
                     <!--  Navigation icon  -->
                     <Label
@@ -709,7 +687,7 @@
                         FontFamily="Montserrat-Medium"
                         HorizontalOptions="Start"
                         Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static langs:Lang.Faq}"
+                        Text="{helpers:Translate Faq}"
                         VerticalOptions="Center" />
                     <!--  Navigation icon  -->
                     <Label
@@ -719,8 +697,20 @@
                         Style="{StaticResource IconLabelStyle}"
                         Text="{x:Static iconFonts:IconFont.ArrowForwardIos}" />
                 </controls:TapAnimationGrid>
-
                 <BoxView Style="{StaticResource HorizontalSeparatorStyle}" />
+
+                <!--  Header label for current version  -->
+                <Label
+                    Margin="16,40,0,16"
+                    FontFamily="Montserrat-SemiBold"
+                    FontSize="12"
+                    HorizontalOptions="FillAndExpand"
+                    LineHeight="{OnPlatform Default=-1,
+                                            Android=1.25}"
+                    Text="{helpers:Translate AppVersion}"
+                    TextColor="{DynamicResource Gray-800}"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center" />
 
             </StackLayout>
         </ScrollView>

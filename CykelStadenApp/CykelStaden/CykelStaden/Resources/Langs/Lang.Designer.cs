@@ -101,7 +101,7 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Version 2.0.0.
+        ///   Looks up a localized string similar to Version 1.0.6.
         /// </summary>
         public static string AppVersion {
             get {
@@ -132,9 +132,9 @@ namespace CykelStaden.Resources.Langs {
         /// <summary>
         ///   Looks up a localized string similar to Cykelparkeringar.
         /// </summary>
-        public static string BikeParking {
+        public static string BikeParkings {
             get {
-                return ResourceManager.GetString("BikeParking", resourceCulture);
+                return ResourceManager.GetString("BikeParkings", resourceCulture);
             }
         }
         
@@ -157,11 +157,47 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Avbryt.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ändra Språk.
+        /// </summary>
+        public static string ChangeLang {
+            get {
+                return ResourceManager.GetString("ChangeLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mörkt Läge.
         /// </summary>
         public static string DarkMode {
             get {
                 return ResourceManager.GetString("DarkMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Klar.
+        /// </summary>
+        public static string Done {
+            get {
+                return ResourceManager.GetString("Done", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Engelska.
+        /// </summary>
+        public static string English {
+            get {
+                return ResourceManager.GetString("English", resourceCulture);
             }
         }
         
@@ -172,6 +208,15 @@ namespace CykelStaden.Resources.Langs {
         public static string ErrorRepDesc {
             get {
                 return ResourceManager.GetString("ErrorRepDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rapportera Fel.
+        /// </summary>
+        public static string ErrorReport {
+            get {
+                return ResourceManager.GetString("ErrorReport", resourceCulture);
             }
         }
         
@@ -190,6 +235,24 @@ namespace CykelStaden.Resources.Langs {
         public static string Faq {
             get {
                 return ResourceManager.GetString("Faq", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Språk Ändrat.
+        /// </summary>
+        public static string LangChanged {
+            get {
+                return ResourceManager.GetString("LangChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Du har ändrat språk!.
+        /// </summary>
+        public static string LangChangedDesc {
+            get {
+                return ResourceManager.GetString("LangChangedDesc", resourceCulture);
             }
         }
         
@@ -268,6 +331,15 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Välj Språk.
+        /// </summary>
+        public static string SelectLanguage {
+            get {
+                return ResourceManager.GetString("SelectLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inställningar.
         /// </summary>
         public static string Settings {
@@ -309,6 +381,15 @@ namespace CykelStaden.Resources.Langs {
         public static string Support {
             get {
                 return ResourceManager.GetString("Support", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Svenska.
+        /// </summary>
+        public static string Swedish {
+            get {
+                return ResourceManager.GetString("Swedish", resourceCulture);
             }
         }
         

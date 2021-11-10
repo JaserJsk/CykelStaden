@@ -135,9 +135,6 @@
   <data name="Info" xml:space="preserve">
     <value>info</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>language</value>
-  </data>
   <data name="LocalGasStation" xml:space="preserve">
     <value>local_gas_station</value>
   </data>
@@ -146,6 +143,9 @@
   </data>
   <data name="LocationOn" xml:space="preserve">
     <value>location_on</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>menu</value>
   </data>
   <data name="Notifications" xml:space="preserve">
     <value>notifications</value>
@@ -156,10 +156,19 @@
   <data name="Quiz" xml:space="preserve">
     <value>quiz</value>
   </data>
+  <data name="Report" xml:space="preserve">
+    <value>report</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>save</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>settings</value>
   </data>
   <data name="Traffic" xml:space="preserve">
     <value>traffic</value>
+  </data>
+  <data name="Translate" xml:space="preserve">
+    <value>translate</value>
   </data>
 </root>

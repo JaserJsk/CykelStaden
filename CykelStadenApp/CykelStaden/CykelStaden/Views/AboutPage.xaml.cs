@@ -1,9 +1,9 @@
-﻿using CykelStaden.ViewModels.About;
-using Xamarin.Forms.Internals;
-using Xamarin.Forms.Xaml;
-
-namespace CykelStaden.Views
+﻿namespace CykelStaden.Views
 {
+    using CykelStaden.ViewModels.About;
+    using Xamarin.Forms.Internals;
+    using Xamarin.Forms.Xaml;
+
     /// <summary>
     /// About simple page.
     /// </summary>
@@ -12,12 +12,12 @@ namespace CykelStaden.Views
     public partial class AboutPage
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:CykelStaden.Views.AboutPage"/> class.
+        /// Initializes a new instance of the <see cref="AboutPage"/> class.
         /// </summary>
         public AboutPage()
         {
             this.InitializeComponent();
-            this.BindingContext = AboutViewModel.BindingContext;
+            BindingContext = new  AboutViewModel();
         }
     }
 }
