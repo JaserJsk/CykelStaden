@@ -7,6 +7,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 using CykelStaden.Themes;
+using System.Linq;
+using CykelStaden.Globals;
 
 namespace CykelStaden
 {
@@ -40,6 +42,18 @@ namespace CykelStaden
             InitializeComponent();
 
             drawerNavItems();
+
+            if (GlobalAccess.themeIsLight)
+            {
+                // This is needed to update the background color of a listview
+                //App.Current.SetDynamicResource(ListView.BackgroundColorProperty, "Gray-ListView-Bg");
+                App.Current.Resources["Gray-ListView-Bg"] = Color.FromHex("#ecf0f1");
+
+                Console.WriteLine("Theme is : Light");
+            } else
+            {
+                Console.WriteLine("Theme is : Dark");
+            }
         }
 
         /// <summary>
@@ -48,9 +62,19 @@ namespace CykelStaden
         private void drawerNavItems()
         {
             List<MenuItem> itemList = new List<MenuItem>();
-            itemList.Add(new MenuItem { ItemIcon = IconFont.LocationOn, ItemName = Lang.Map });
-            itemList.Add(new MenuItem { ItemIcon = IconFont.Report, ItemName = Lang.ErrorReport });
-            itemList.Add(new MenuItem { ItemIcon = IconFont.Settings, ItemName = Lang.Settings });
+            itemList.Add(new MenuItem { 
+                ItemIcon = IconFont.LocationOn, 
+                ItemName = Lang.Map 
+            });
+            itemList.Add(new MenuItem { 
+                ItemIcon = IconFont.Report, 
+                ItemName = Lang.ErrorReport 
+            });
+            itemList.Add(new MenuItem { 
+                ItemIcon = IconFont.Settings, 
+                ItemName = Lang.Settings 
+            });
+
             listView.ItemsSource = itemList;
         }
 
@@ -74,17 +98,17 @@ namespace CykelStaden
             if (e.SelectedItemIndex == 0)
             {
                 settingsPage.IsVisible = false;
-
+                headerLabel.Text = Lang.Map;
             }
             else if (e.SelectedItemIndex == 1)
             {
                 settingsPage.IsVisible = false;
-
+                headerLabel.Text = Lang.ErrorReport;
             }
             else if (e.SelectedItemIndex == 2)
             {
                 settingsPage.IsVisible = true;
-
+                headerLabel.Text = Lang.Settings;
             }
 
             navigationDrawer.ToggleDrawer();

@@ -10,12 +10,6 @@
                 <themes:LightTheme />
             </ResourceDictionary.MergedDictionaries >
 
-            <!-- Style NavigationBar -->
-            <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryColor}"/>
-                <Setter Property="BarTextColor" Value="{DynamicResource Gray-White}"/>
-            </Style>
-
         </ResourceDictionary>
 
     </Application.Resources>

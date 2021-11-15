@@ -27,7 +27,7 @@
                 </Grid.RowDefinitions>
 
                 <StackLayout x:Name="drawerNavBar" 
-                             HeightRequest="56"
+                             HeightRequest="44"
                              Orientation="Horizontal"
                              BackgroundColor="{DynamicResource PrimaryColor}">
 

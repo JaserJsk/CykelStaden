@@ -22,7 +22,6 @@ namespace CykelStaden.Helpers
                 Path = $"[{Text}]",
                 Source = LocalizationResourceManager.Instance,
                 StringFormat = StringFormat
-
             };
             return binding;
         }

@@ -1,8 +1,10 @@
 ﻿using Acr.UserDialogs;
+using CykelStaden.Globals;
 using CykelStaden.Helpers;
 using CykelStaden.Models;
 using CykelStaden.Resources.Langs;
 using CykelStaden.Views;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -35,7 +37,7 @@ namespace CykelStaden.ViewModels
         /// <summary>
         /// Defines the isLightTheme.
         /// </summary>
-        private bool isLightTheme = true;
+        //private bool isLightTheme = true;
 
         #endregion
 
@@ -126,7 +128,8 @@ namespace CykelStaden.ViewModels
         /// </summary>
         private void OnToggleTheme()
         {
-            if (isLightTheme)
+
+            if (GlobalAccess.themeIsLight)
             {
                 ICollection<ResourceDictionary> mergedDictionaries = App.Current.Resources.MergedDictionaries;
                 var lightTheme = mergedDictionaries.OfType<Themes.LightTheme>().FirstOrDefault();
@@ -141,7 +144,8 @@ namespace CykelStaden.ViewModels
                 App.Current.SetDynamicResource(ListView.BackgroundColorProperty, "Gray-ListView-Bg");
                 App.Current.Resources["Gray-ListView-Bg"] = Color.FromHex("#2F343C");
 
-                isLightTheme = false;
+                GlobalAccess.ThemeIsLight = false;
+                //Console.WriteLine("Theme is : " + GlobalAccess.themeIsLight);
             }
             else
             {
@@ -156,9 +160,10 @@ namespace CykelStaden.ViewModels
 
                 // This is needed to update the background color of a listview
                 App.Current.SetDynamicResource(ListView.BackgroundColorProperty, "Gray-ListView-Bg");
-                App.Current.Resources["Gray-ListView-Bg"] = Color.FromHex("#ffffff");
+                App.Current.Resources["Gray-ListView-Bg"] = Color.FromHex("#ecf0f1");
 
-                isLightTheme = true;
+                GlobalAccess.ThemeIsLight = true;
+                //Console.WriteLine("Theme is : " + GlobalAccess.themeIsLight);
             }
         }
 

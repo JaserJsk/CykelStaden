@@ -13,7 +13,7 @@
 
     <ContentView.Content>
         <ScrollView>
-            <StackLayout BackgroundColor="{DynamicResource Gray-100}" Spacing="0" Padding="0">
+            <StackLayout BackgroundColor="{DynamicResource Gray-Bg}" Spacing="0" Padding="0">
 
                 <!--  **************************************************************  -->
                 <!--  Header label for setting  -->
@@ -31,7 +31,7 @@
 
                 <!--  Grid for BikeRoutes label and switch  -->
                 <Grid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     RowSpacing="0">
@@ -53,6 +53,7 @@
                         Text="{helpers:Translate BikeRoutes}"
                         VerticalOptions="Center" />
                     <!--  BikeRoutes switch  -->
+
                     <buttons:SfSwitch
                         Grid.Column="2"
                         Margin="8,0"
@@ -92,11 +93,12 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                     </buttons:SfSwitch>
+
                 </Grid>
 
                 <!--  Grid for BikePumps label and switch  -->
                 <Grid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     RowSpacing="0">
@@ -161,7 +163,7 @@
 
                 <!--  Grid for BikeParking label and switch  -->
                 <Grid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     RowSpacing="0">
@@ -226,7 +228,7 @@
 
                 <!--  Grid for Notifications label and switch  -->
                 <Grid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     RowSpacing="0">
@@ -291,7 +293,7 @@
 
                 <!--  Grid for Notifications label and switch  -->
                 <Grid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     RowSpacing="0">
@@ -370,7 +372,7 @@
 
                 <!--  Grid for Notifications label and switch  -->
                 <Grid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     RowSpacing="0">
@@ -432,9 +434,10 @@
                         </VisualStateManager.VisualStateGroups>
                     </buttons:SfSwitch>
                 </Grid>
+                
                 <!--  Grid for DarkMode and switch  -->
                 <Grid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     RowSpacing="0">
@@ -501,7 +504,7 @@
 
                 <!--  Grid for Language and dropdown  -->
                 <Grid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     RowSpacing="0">
@@ -523,7 +526,7 @@
                             VerticalOptions="Start"
                             HeightRequest="40"
                             Title="{helpers:Translate ChangeLang}"
-                            BackgroundColor="{DynamicResource Gray-Bg}"
+                            BackgroundColor="{DynamicResource Gray-100}"
                             TextColor="{DynamicResource Gray-900}"
                             WidthRequest="{Binding Source={x:Static local:SettingsViewModel.PickerWidth}}"
                             ItemsSource="{Binding languagesModel}"
@@ -561,7 +564,7 @@
 
                 <!--  Grid for About label and navigation bar icon  -->
                 <controls:TapAnimationGrid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     Command="{Binding AboutCommand}"
@@ -596,7 +599,7 @@
 
                 <!--  Grid for Steer & Set label and navigation bar icon  -->
                 <controls:TapAnimationGrid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     Command="{Binding SteerSetCommand}"
@@ -631,7 +634,7 @@
 
                 <!--  Grid for Privacy Policy label and navigation bar icon  -->
                 <controls:TapAnimationGrid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     Command="{Binding PrivacyPolicyCommand}"
@@ -666,7 +669,7 @@
 
                 <!--  Grid for FAQs label and navigation bar icon  -->
                 <controls:TapAnimationGrid
-                    BackgroundColor="{DynamicResource Gray-Bg}"
+                    BackgroundColor="{DynamicResource Gray-100}"
                     ColumnDefinitions="Auto, *, Auto"
                     ColumnSpacing="0"
                     Command="{Binding FAQCommand}"

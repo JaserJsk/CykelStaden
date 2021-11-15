@@ -1,5 +1,7 @@
+using System.Resources;
 using Xamarin.Forms;
 
+[assembly: NeutralResourcesLanguage("sv-SE")]
 [assembly: ExportFont("MaterialIcons-Regular.ttf", Alias = "Material-Regular")]
 [assembly: ExportFont("MaterialIconsOutlined-Regular.otf", Alias = "Material-Outlined")]
 [assembly: ExportFont("Montserrat-Bold.ttf", Alias = "Montserrat-Bold")]
