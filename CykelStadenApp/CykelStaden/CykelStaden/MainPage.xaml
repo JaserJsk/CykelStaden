@@ -121,7 +121,7 @@
                               RowHeight="70"
                               ItemSelected="listView_ItemSelected"
                               SeparatorColor="Transparent"
-                              BackgroundColor="{DynamicResource Gray-ListView-Bg}">
+                              BackgroundColor="Transparent">
 
                         <ListView.ItemTemplate>
                             <DataTemplate x:Name="dataTemplate">

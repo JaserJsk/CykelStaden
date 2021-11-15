@@ -1,10 +1,8 @@
 ﻿using Acr.UserDialogs;
-using CykelStaden.Globals;
 using CykelStaden.Helpers;
 using CykelStaden.Models;
 using CykelStaden.Resources.Langs;
 using CykelStaden.Views;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -37,7 +35,7 @@ namespace CykelStaden.ViewModels
         /// <summary>
         /// Defines the isLightTheme.
         /// </summary>
-        //private bool isLightTheme = true;
+        private bool isDarkTheme = false;
 
         #endregion
 
@@ -129,7 +127,7 @@ namespace CykelStaden.ViewModels
         private void OnToggleTheme()
         {
 
-            if (GlobalAccess.themeIsLight)
+            if (!isDarkTheme)
             {
                 ICollection<ResourceDictionary> mergedDictionaries = App.Current.Resources.MergedDictionaries;
                 var lightTheme = mergedDictionaries.OfType<Themes.LightTheme>().FirstOrDefault();
@@ -139,13 +137,7 @@ namespace CykelStaden.ViewModels
                 }
 
                 mergedDictionaries.Add(new Themes.DarkTheme());
-
-                // This is needed to update the background color of a listview
-                App.Current.SetDynamicResource(ListView.BackgroundColorProperty, "Gray-ListView-Bg");
-                App.Current.Resources["Gray-ListView-Bg"] = Color.FromHex("#2F343C");
-
-                GlobalAccess.ThemeIsLight = false;
-                //Console.WriteLine("Theme is : " + GlobalAccess.themeIsLight);
+                isDarkTheme = true;
             }
             else
             {
@@ -157,13 +149,7 @@ namespace CykelStaden.ViewModels
                 }
 
                 mergedDictionaries.Add(new Themes.LightTheme());
-
-                // This is needed to update the background color of a listview
-                App.Current.SetDynamicResource(ListView.BackgroundColorProperty, "Gray-ListView-Bg");
-                App.Current.Resources["Gray-ListView-Bg"] = Color.FromHex("#ecf0f1");
-
-                GlobalAccess.ThemeIsLight = true;
-                //Console.WriteLine("Theme is : " + GlobalAccess.themeIsLight);
+                isDarkTheme = false;
             }
         }
 

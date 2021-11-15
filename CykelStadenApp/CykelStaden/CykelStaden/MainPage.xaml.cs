@@ -6,9 +6,6 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
-using CykelStaden.Themes;
-using System.Linq;
-using CykelStaden.Globals;
 
 namespace CykelStaden
 {
@@ -40,20 +37,7 @@ namespace CykelStaden
         public MainPage()
         {
             InitializeComponent();
-
             drawerNavItems();
-
-            if (GlobalAccess.themeIsLight)
-            {
-                // This is needed to update the background color of a listview
-                //App.Current.SetDynamicResource(ListView.BackgroundColorProperty, "Gray-ListView-Bg");
-                App.Current.Resources["Gray-ListView-Bg"] = Color.FromHex("#ecf0f1");
-
-                Console.WriteLine("Theme is : Light");
-            } else
-            {
-                Console.WriteLine("Theme is : Dark");
-            }
         }
 
         /// <summary>
