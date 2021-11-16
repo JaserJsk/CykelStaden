@@ -124,8 +124,7 @@
     <value>Göteborgs Stad vill att så många som möjligt ska kunna använda den här appen. Tillgänglighetsredogörelsen beskriver hur
 Cykelstaden uppfyller lagen om tillgänglighet till digital offentlig service, eventuella kända tillgänglighetsproblem och hur du kan rapportera brister till oss så att vi kan åtgärda dem. Här finns tillgänglighetsredogörelsen för Cykelstaden Kontaktuppgifter
 Du kan kontakta Göteborgs Stad genom att
-mejla till goteborg@goteborg.se eller ringa
-031-365 00 00</value>
+mejla till </value>
   </data>
   <data name="AccessibilityRepTitle" xml:space="preserve">
     <value>Tillgänglighetsredogörelse</value>
@@ -134,7 +133,7 @@ mejla till goteborg@goteborg.se eller ringa
     <value>CYKELSTADEN</value>
   </data>
   <data name="AppVersion" xml:space="preserve">
-    <value>Version 1.0.6</value>
+    <value>Version 2.0.0</value>
   </data>
   <data name="BikeCityDesc" xml:space="preserve">
     <value>Cykelstaden är framtagen av trafikkontoret i Göteborgs Stad för att förenkla cyklistens vardag. I Cykelstaden hittar du lånecyklarna Styr &amp; Ställ, cykelvägar, cykelparkeringar samt stadens alla offentliga cykelpumpar. Du kan även planera din resväg och anmäla skador, hinder eller andra defekter som du upptäckt på cykelbanan. Trafikstörningsfunktionen gör det möjligt
@@ -194,11 +193,17 @@ kommunens arbete.</value>
   <data name="Map" xml:space="preserve">
     <value>Karta</value>
   </data>
+  <data name="MapSettings" xml:space="preserve">
+    <value>Karta Inställningar</value>
+  </data>
   <data name="Nextbike" xml:space="preserve">
     <value>Nextbike</value>
   </data>
   <data name="Notifications" xml:space="preserve">
     <value>Aviseringar</value>
+  </data>
+  <data name="OrCall" xml:space="preserve">
+    <value> eller ringa </value>
   </data>
   <data name="PersonalDataDesc" xml:space="preserve">
     <value>När du använder appen samlas inga andra uppgifter in än de som du väljer att ange om du gör en felanmälan.
@@ -219,7 +224,7 @@ underlätta för dig som användare. Läs om hur trafikkontoret behandlar dina p
     <value>Välj Språk</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Inställningar</value>
+    <value>INSTÄLLNINGAR</value>
   </data>
   <data name="SteerSet" xml:space="preserve">
     <value>Styr &amp; Ställ (Nextbike)</value>

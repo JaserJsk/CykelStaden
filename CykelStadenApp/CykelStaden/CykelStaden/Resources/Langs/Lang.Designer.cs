@@ -19,7 +19,7 @@ namespace CykelStaden.Resources.Langs {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Lang {
@@ -73,8 +73,7 @@ namespace CykelStaden.Resources.Langs {
         ///   Looks up a localized string similar to Göteborgs Stad vill att så många som möjligt ska kunna använda den här appen. Tillgänglighetsredogörelsen beskriver hur
         ///Cykelstaden uppfyller lagen om tillgänglighet till digital offentlig service, eventuella kända tillgänglighetsproblem och hur du kan rapportera brister till oss så att vi kan åtgärda dem. Här finns tillgänglighetsredogörelsen för Cykelstaden Kontaktuppgifter
         ///Du kan kontakta Göteborgs Stad genom att
-        ///mejla till goteborg@goteborg.se eller ringa
-        ///031-365 00 00.
+        ///mejla till .
         /// </summary>
         public static string AccessibilityRepDesc {
             get {
@@ -101,7 +100,7 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Version 1.0.6.
+        ///   Looks up a localized string similar to Version 2.0.0.
         /// </summary>
         public static string AppVersion {
             get {
@@ -275,6 +274,15 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Karta Inställningar.
+        /// </summary>
+        public static string MapSettings {
+            get {
+                return ResourceManager.GetString("MapSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nextbike.
         /// </summary>
         public static string Nextbike {
@@ -289,6 +297,15 @@ namespace CykelStaden.Resources.Langs {
         public static string Notifications {
             get {
                 return ResourceManager.GetString("Notifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  eller ringa .
+        /// </summary>
+        public static string OrCall {
+            get {
+                return ResourceManager.GetString("OrCall", resourceCulture);
             }
         }
         
@@ -340,7 +357,7 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inställningar.
+        ///   Looks up a localized string similar to INSTÄLLNINGAR.
         /// </summary>
         public static string Settings {
             get {

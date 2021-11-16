@@ -125,8 +125,7 @@
 to digital public service, any known accessibility issues and how you can report deficiencies to us so that we can remedy them.
 Here is the accessibility report for Cykelstaden Contact information.
 You can contact the City of Gothenburg by
-email goteborg@goteborg.se or call
-031-365 00 00</value>
+email </value>
   </data>
   <data name="AccessibilityRepTitle" xml:space="preserve">
     <value>Accessibility Report</value>
@@ -135,7 +134,7 @@ email goteborg@goteborg.se or call
     <value>BIKECITY</value>
   </data>
   <data name="AppVersion" xml:space="preserve">
-    <value>Version 1.0.6</value>
+    <value>Version 2.0.0</value>
   </data>
   <data name="BikeCityDesc" xml:space="preserve">
     <value>The bicycle city is developed by the traffic office in the City of Gothenburg to simplify the cyclist's everyday. In Cykelstaden you will find the loan bicycles Steer &amp; Set, bike paths, bike parking and all the city's public bicycle pumps. You can also plan your itinerary and report damage, obstacles or other defects that you have discovered on the bike path. The traffic disruption function makes it possible to see ongoing road works that affect cycle paths. If you discover an error in the app
@@ -193,11 +192,17 @@ which gives all citizens the right to access the municipality's work.</value>
   <data name="Map" xml:space="preserve">
     <value>Map</value>
   </data>
+  <data name="MapSettings" xml:space="preserve">
+    <value>Map Settings</value>
+  </data>
   <data name="Nextbike" xml:space="preserve">
     <value>Nextbike</value>
   </data>
   <data name="Notifications" xml:space="preserve">
     <value>Notifications</value>
+  </data>
+  <data name="OrCall" xml:space="preserve">
+    <value> or call </value>
   </data>
   <data name="PersonalDataDesc" xml:space="preserve">
     <value>When you use the app, no one else collects information than the one you choose to enter you report an error. When submitting an error report, enter a GPS position for the error by entering an address or select your current location. The position of the fault is needed for the fault to be able to be remedied.
@@ -218,7 +223,7 @@ Read about how the traffic office treats yours personal data</value>
     <value>Select Language</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>SETTINGS</value>
   </data>
   <data name="SteerSet" xml:space="preserve">
     <value>Steer &amp; Set (Nextbike)</value>

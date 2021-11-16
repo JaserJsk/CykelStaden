@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:resources="clr-namespace:CykelStaden.Resources.Langs"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:controls="clr-namespace:CykelStaden.Controls"
              ios:Page.UseSafeArea="true"
              NavigationPage.HasNavigationBar="True"
              BackgroundColor="{DynamicResource Gray-Bg}">
@@ -44,131 +45,143 @@
                         VerticalOptions="Start"
                         VerticalTextAlignment="Start" />
 
-                    <!--  Bikecity Title  -->
-                    <Label
-                        LineHeight="{OnPlatform Android=1.25,
-                                                Default=-1}"
-                        Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static resources:Lang.BikeCityTitle}">
-                        <Label.Margin>
-                            <OnIdiom
-                                x:TypeArguments="Thickness"
-                                Default="0, 32, 0, 8"
-                                Phone="0, 16, 0, 16" />
-                        </Label.Margin>
-                    </Label>
+                    <!--  Bikecity Title & Description  -->
+                    <controls:CustomShadowFrame Margin="16,16,16,0" 
+                                            Padding="16"
+                                            HasShadow="True"
+                                            CornerRadius="10"
+                                            BackgroundColor="{DynamicResource GrayShadowColor}" 
+                                            BorderColor="{DynamicResource GrayShadowColor}">
 
-                    <!--  Bikecity Description  -->
-                    <Label
-                        Margin="16,0,16,0"
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DescriptionLabelStyle}"
-                        Text="{x:Static resources:Lang.BikeCityDesc}" />
+                        <StackLayout>
+                            <Label LineHeight="{OnPlatform Android=1.25, Default=-1}"
+                                   Style="{StaticResource TitleLabelStyle}"
+                                   Text="{x:Static resources:Lang.BikeCityTitle}" />
 
-                    <!--  TrafficDis Title  -->
-                    <Label
-                        LineHeight="{OnPlatform Android=1.25,
-                                                Default=-1}"
-                        Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static resources:Lang.TrafficDisTitle}">
-                        <Label.Margin>
-                            <OnIdiom
-                                x:TypeArguments="Thickness"
-                                Default="0, 32, 0, 8"
-                                Phone="0, 16, 0, 16" />
-                        </Label.Margin>
-                    </Label>
+                            <Label HorizontalTextAlignment="Start"
+                                   Style="{StaticResource DescriptionLabelStyle}"
+                                   Text="{x:Static resources:Lang.BikeCityDesc}" />
+                        </StackLayout>
+                    </controls:CustomShadowFrame>
 
-                    <!--  TrafficDis Description  -->
-                    <Label
-                        Margin="16,0,16,0"
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DescriptionLabelStyle}"
-                        Text="{x:Static resources:Lang.TrafficDisDesc}" />
+                    <!--  TrafficDis Title & Description  -->
+                    <controls:CustomShadowFrame Margin="16,16,16,0" 
+                                            Padding="16"
+                                            HasShadow="True"
+                                            CornerRadius="10"
+                                            BackgroundColor="{DynamicResource GrayShadowColor}" 
+                                            BorderColor="{DynamicResource GrayShadowColor}">
+                        <StackLayout>
+                            <Label LineHeight="{OnPlatform Android=1.25, Default=-1}"
+                                   Style="{StaticResource TitleLabelStyle}"
+                                   Text="{x:Static resources:Lang.TrafficDisTitle}" />
 
-                    <!--  SteerSet Title  -->
-                    <Label
-                        LineHeight="{OnPlatform Android=1.25,
-                                                Default=-1}"
-                        Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static resources:Lang.SteerSetTitle}">
-                        <Label.Margin>
-                            <OnIdiom
-                                x:TypeArguments="Thickness"
-                                Default="0, 32, 0, 8"
-                                Phone="0, 16, 0, 16" />
-                        </Label.Margin>
-                    </Label>
+                            <Label HorizontalTextAlignment="Start"
+                                   Style="{StaticResource DescriptionLabelStyle}"
+                                   Text="{x:Static resources:Lang.TrafficDisDesc}" />
+                        </StackLayout>
+                    </controls:CustomShadowFrame>
 
-                    <!--  SteerSet Description  -->
-                    <Label
-                        Margin="16,0,16,0"
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DescriptionLabelStyle}"
-                        Text="{x:Static resources:Lang.SteerSetDesc}" />
+                    <!--  SteerSet Title & Description -->
+                    <controls:CustomShadowFrame Margin="16,16,16,0" 
+                                            Padding="16"
+                                            HasShadow="True"
+                                            CornerRadius="10"
+                                            BackgroundColor="{DynamicResource GrayShadowColor}" 
+                                            BorderColor="{DynamicResource GrayShadowColor}">
+                        <StackLayout>
+                            <Label LineHeight="{OnPlatform Android=1.25, Default=-1}"
+                                   Style="{StaticResource TitleLabelStyle}"
+                                   Text="{x:Static resources:Lang.SteerSetTitle}" />
 
-                    <!--  ErrorRep Title  -->
-                    <Label
-                        LineHeight="{OnPlatform Android=1.25,
-                                                Default=-1}"
-                        Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static resources:Lang.ErrorRepTitle}">
-                        <Label.Margin>
-                            <OnIdiom
-                                x:TypeArguments="Thickness"
-                                Default="0, 32, 0, 8"
-                                Phone="0, 16, 0, 16" />
-                        </Label.Margin>
-                    </Label>
+                            <Label HorizontalTextAlignment="Start"
+                               Style="{StaticResource DescriptionLabelStyle}"
+                               Text="{x:Static resources:Lang.SteerSetDesc}" />
+                        </StackLayout>
+                    </controls:CustomShadowFrame>
 
-                    <!--  ErrorRep Description  -->
-                    <Label
-                        Margin="16,0,16,0"
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DescriptionLabelStyle}"
-                        Text="{x:Static resources:Lang.ErrorRepDesc}" />
+                    <!--  ErrorRep Title & Description  -->
+                    <controls:CustomShadowFrame Margin="16,16,16,0" 
+                                            Padding="16"
+                                            HasShadow="True"
+                                            CornerRadius="10"
+                                            BackgroundColor="{DynamicResource GrayShadowColor}" 
+                                            BorderColor="{DynamicResource GrayShadowColor}">
+                        <StackLayout>
+                            <Label LineHeight="{OnPlatform Android=1.25, Default=-1}"
+                                   Style="{StaticResource TitleLabelStyle}"
+                                   Text="{x:Static resources:Lang.ErrorRepTitle}" />
 
-                    <!--  PersonalData Title  -->
-                    <Label
-                        LineHeight="{OnPlatform Android=1.25,
-                                                Default=-1}"
-                        Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static resources:Lang.PersonalDataTitle}">
-                        <Label.Margin>
-                            <OnIdiom
-                                x:TypeArguments="Thickness"
-                                Default="0, 32, 0, 8"
-                                Phone="0, 16, 0, 16" />
-                        </Label.Margin>
-                    </Label>
+                            <Label HorizontalTextAlignment="Start"
+                                   Style="{StaticResource DescriptionLabelStyle}"
+                                   Text="{x:Static resources:Lang.ErrorRepDesc}" />
+                        </StackLayout>
+                    </controls:CustomShadowFrame>
 
-                    <!--  PersonalData Description  -->
-                    <Label
-                        Margin="16,0,16,0"
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DescriptionLabelStyle}"
-                        Text="{x:Static resources:Lang.PersonalDataDesc}" />
+                    <!--  PersonalData Title & Description  -->
+                    <controls:CustomShadowFrame Margin="16,16,16,0" 
+                                            Padding="16"
+                                            HasShadow="True"
+                                            CornerRadius="10"
+                                            BackgroundColor="{DynamicResource GrayShadowColor}" 
+                                            BorderColor="{DynamicResource GrayShadowColor}">
+                        <StackLayout>
+                            <Label LineHeight="{OnPlatform Android=1.25, Default=-1}"
+                                   Style="{StaticResource TitleLabelStyle}"
+                                   Text="{x:Static resources:Lang.PersonalDataTitle}" />
 
-                    <!--  AccessibilityRep Title  -->
-                    <Label
-                        LineHeight="{OnPlatform Android=1.25,
-                                                Default=-1}"
-                        Style="{StaticResource TitleLabelStyle}"
-                        Text="{x:Static resources:Lang.AccessibilityRepTitle}">
-                        <Label.Margin>
-                            <OnIdiom
-                                x:TypeArguments="Thickness"
-                                Default="0, 32, 0, 8"
-                                Phone="0, 16, 0, 16" />
-                        </Label.Margin>
-                    </Label>
+                            <Label HorizontalTextAlignment="Start"
+                                   Style="{StaticResource DescriptionLabelStyle}"
+                                   Text="{x:Static resources:Lang.PersonalDataDesc}" />
+                        </StackLayout>
+                    </controls:CustomShadowFrame>
 
-                    <!--  AccessibilityRep Description  -->
-                    <Label
-                        Margin="16,0,16,0"
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DescriptionLabelStyle}"
-                        Text="{x:Static resources:Lang.AccessibilityRepDesc}" />
+                    <!--  AccessibilityRep Title & Description  -->
+                    <controls:CustomShadowFrame Margin="16,16,16,0" 
+                                            Padding="16"
+                                            HasShadow="True"
+                                            CornerRadius="10"
+                                            BackgroundColor="{DynamicResource GrayShadowColor}" 
+                                            BorderColor="{DynamicResource GrayShadowColor}">
+                        <StackLayout>
+                            <Label LineHeight="{OnPlatform Android=1.25, Default=-1}"
+                                   Style="{StaticResource TitleLabelStyle}"
+                                   Text="{x:Static resources:Lang.AccessibilityRepTitle}" />
+                            
+                            <!--
+                            <Label HorizontalTextAlignment="Start"
+                                   Style="{StaticResource DescriptionLabelStyle}"
+                                   Text="{x:Static resources:Lang.AccessibilityRepDesc}" />
+                            -->
+
+                            <Label HorizontalTextAlignment="Start"
+                                   Style="{StaticResource DescriptionLabelStyle}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        
+                                        <Span Text="{x:Static resources:Lang.AccessibilityRepDesc}" />
+
+                                        <Span Text="goteborg@goteborg.se" 
+                                              TextColor="{DynamicResource HyperLink}">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding EmailCommand}" CommandParameter="https://xamarin.com" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+
+                                        <Span Text="{x:Static resources:Lang.OrCall}" />
+
+                                        <Span Text="031-3650000" 
+                                              TextColor="{DynamicResource HyperLink}">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding PhoneCommand}" CommandParameter="https://xamarin.com" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </controls:CustomShadowFrame>
+                    
                 </StackLayout>
             </ScrollView>
         </Grid>

@@ -79,20 +79,27 @@ namespace CykelStaden
         /// <param name="e">The e<see cref="SelectedItemChangedEventArgs"/>.</param>
         public void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItemIndex == 0)
+            switch (e.SelectedItemIndex)
             {
-                settingsPage.IsVisible = false;
-                headerLabel.Text = Lang.Map;
-            }
-            else if (e.SelectedItemIndex == 1)
-            {
-                settingsPage.IsVisible = false;
-                headerLabel.Text = Lang.ErrorReport;
-            }
-            else if (e.SelectedItemIndex == 2)
-            {
-                settingsPage.IsVisible = true;
-                headerLabel.Text = Lang.Settings;
+                case 0:
+                    settingsPage.IsVisible = false;
+                    headerLabel.Text = Lang.Map;
+                    break;
+
+                case 1:
+                    settingsPage.IsVisible = false;
+                    headerLabel.Text = Lang.ErrorReport;
+                    break;
+
+                case 2:
+                    settingsPage.IsVisible = true;
+                    headerLabel.Text = Lang.Settings;
+                    break;
+
+                default:
+                    settingsPage.IsVisible = false;
+                    headerLabel.Text = Lang.AppName;
+                    break;
             }
 
             navigationDrawer.ToggleDrawer();

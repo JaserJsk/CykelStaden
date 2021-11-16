@@ -19,7 +19,6 @@
                                          DrawerFooterHeight="{Binding Source={x:Static local:MainPage.DrawerFooterHeight}}">
         <navigationdrawer:SfNavigationDrawer.ContentView>
 
-
             <Grid x:Name="mainContentView">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
@@ -27,9 +26,15 @@
                 </Grid.RowDefinitions>
 
                 <StackLayout x:Name="drawerNavBar" 
-                             HeightRequest="44"
                              Orientation="Horizontal"
                              BackgroundColor="{DynamicResource PrimaryColor}">
+
+                    <StackLayout.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS" Value="44" />
+                            <On Platform="Android" Value="56" />
+                        </OnPlatform>
+                    </StackLayout.HeightRequest>
 
                     <button:SfButton x:Name="menuButton" 
                                      HeightRequest="50" 
