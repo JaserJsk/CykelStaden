@@ -1,7 +1,8 @@
-﻿using Acr.UserDialogs;
+﻿using AiForms.Dialogs;
 using CykelStaden.Helpers;
 using CykelStaden.Models;
 using CykelStaden.Resources.Langs;
+using CykelStaden.Resources.Icons;
 using CykelStaden.Views;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using CykelStaden.Dialogs;
 
 namespace CykelStaden.ViewModels
 {
@@ -52,7 +54,16 @@ namespace CykelStaden.ViewModels
                 LocalizationResourceManager.Instance.SetCulture(CultureInfo.GetCultureInfo(SelectedLanguage.LangCI));
                 LoadLanguages();
 
-                await UserDialogs.Instance.AlertAsync(Lang.LangChangedDesc, Lang.LangChanged, Lang.Done);
+                // Here we send the message to all the events that subscribed to the "LanguageChanged" key,
+                // that the language has been changed.
+                MessagingCenter.Send<object, string>(this, "LanguageChanged", "");
+
+                // This is using the AI-Forms to display a custom dialog.
+                var langAlert = await Dialog.Instance.ShowAsync<AlertDialog>
+                (
+                    new { Title = Lang.LangChanged, Icon = IconFont.Translate, Desc = Lang.LangChangedDesc, Confirm = Lang.Ok }
+                );
+
             });
 
             this.AboutCommand = new Command(this.AboutClicked);
@@ -126,7 +137,6 @@ namespace CykelStaden.ViewModels
         /// </summary>
         private void OnToggleTheme()
         {
-
             if (!isDarkTheme)
             {
                 ICollection<ResourceDictionary> mergedDictionaries = App.Current.Resources.MergedDictionaries;
@@ -135,8 +145,9 @@ namespace CykelStaden.ViewModels
                 {
                     mergedDictionaries.Remove(lightTheme);
                 }
-
                 mergedDictionaries.Add(new Themes.DarkTheme());
+                MessagingCenter.Send<object, string>(this, "ThemeIsDark", "");
+
                 isDarkTheme = true;
             }
             else
@@ -147,8 +158,9 @@ namespace CykelStaden.ViewModels
                 {
                     mergedDictionaries.Remove(darkTheme);
                 }
-
                 mergedDictionaries.Add(new Themes.LightTheme());
+                MessagingCenter.Send<object, string>(this, "ThemeIsLight", "");
+
                 isDarkTheme = false;
             }
         }

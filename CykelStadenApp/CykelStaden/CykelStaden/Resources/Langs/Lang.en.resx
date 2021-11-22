@@ -123,9 +123,7 @@
   <data name="AccessibilityRepDesc" xml:space="preserve">
     <value>The City of Gothenburg wants as many as be able to use this app. The accessibility report describes how Cykelstaden complies with the law on accessibility
 to digital public service, any known accessibility issues and how you can report deficiencies to us so that we can remedy them.
-Here is the accessibility report for Cykelstaden Contact information.
-You can contact the City of Gothenburg by
-email </value>
+Here is the accessibility report for Cykelstaden Contact information. You can contact the City of Gothenburg by email </value>
   </data>
   <data name="AccessibilityRepTitle" xml:space="preserve">
     <value>Accessibility Report</value>
@@ -137,8 +135,7 @@ email </value>
     <value>Version 2.0.0</value>
   </data>
   <data name="BikeCityDesc" xml:space="preserve">
-    <value>The bicycle city is developed by the traffic office in the City of Gothenburg to simplify the cyclist's everyday. In Cykelstaden you will find the loan bicycles Steer &amp; Set, bike paths, bike parking and all the city's public bicycle pumps. You can also plan your itinerary and report damage, obstacles or other defects that you have discovered on the bike path. The traffic disruption function makes it possible to see ongoing road works that affect cycle paths. If you discover an error in the app
-Cykelstaden, you report it through the error reporting function.</value>
+    <value>The bicycle city is developed by the traffic office in the City of Gothenburg to simplify the cyclist's everyday. In Cykelstaden you will find the loan bicycles Steer &amp; Set, bike paths, bike parking and all the city's public bicycle pumps. You can also plan your itinerary and report damage, obstacles or other defects that you have discovered on the bike path. The traffic disruption function makes it possible to see ongoing road works that affect cycle paths. If you discover an error in the app Cykelstaden, you report it through the error reporting function.</value>
   </data>
   <data name="BikeCityTitle" xml:space="preserve">
     <value>Bikecity</value>
@@ -160,9 +157,6 @@ Cykelstaden, you report it through the error reporting function.</value>
   </data>
   <data name="DarkMode" xml:space="preserve">
     <value>Dark Mode</value>
-  </data>
-  <data name="Done" xml:space="preserve">
-    <value>Done</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
@@ -201,6 +195,9 @@ which gives all citizens the right to access the municipality's work.</value>
   <data name="Notifications" xml:space="preserve">
     <value>Notifications</value>
   </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
   <data name="OrCall" xml:space="preserve">
     <value> or call </value>
   </data>
@@ -223,7 +220,7 @@ Read about how the traffic office treats yours personal data</value>
     <value>Select Language</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>SETTINGS</value>
+    <value>Settings</value>
   </data>
   <data name="SteerSet" xml:space="preserve">
     <value>Steer &amp; Set (Nextbike)</value>

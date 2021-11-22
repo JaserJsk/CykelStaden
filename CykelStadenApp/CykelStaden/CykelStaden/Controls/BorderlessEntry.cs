@@ -9,5 +9,6 @@ namespace CykelStaden.Controls
     [Preserve(AllMembers = true)]
     public class BorderlessEntry : Entry
     {
+        // LEAVE EMPTY
     }
 }

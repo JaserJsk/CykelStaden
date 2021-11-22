@@ -70,10 +70,9 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Göteborgs Stad vill att så många som möjligt ska kunna använda den här appen. Tillgänglighetsredogörelsen beskriver hur
-        ///Cykelstaden uppfyller lagen om tillgänglighet till digital offentlig service, eventuella kända tillgänglighetsproblem och hur du kan rapportera brister till oss så att vi kan åtgärda dem. Här finns tillgänglighetsredogörelsen för Cykelstaden Kontaktuppgifter
-        ///Du kan kontakta Göteborgs Stad genom att
-        ///mejla till .
+        ///   Looks up a localized string similar to Göteborgs Stad vill att så många som möjligt ska kunna använda den här appen. Tillgänglighetsredogörelsen beskriver hur Cykelstaden uppfyller lagen om tillgänglighet till digital offentlig service, 
+        ///eventuella kända tillgänglighetsproblem och hur du kan rapportera brister till oss så att vi kan åtgärda dem. Här finns tillgänglighetsredogörelsen för Cykelstaden Kontaktuppgifter
+        ///Du kan kontakta Göteborgs Stad genom att mejla till .
         /// </summary>
         public static string AccessibilityRepDesc {
             get {
@@ -109,9 +108,8 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cykelstaden är framtagen av trafikkontoret i Göteborgs Stad för att förenkla cyklistens vardag. I Cykelstaden hittar du lånecyklarna Styr &amp; Ställ, cykelvägar, cykelparkeringar samt stadens alla offentliga cykelpumpar. Du kan även planera din resväg och anmäla skador, hinder eller andra defekter som du upptäckt på cykelbanan. Trafikstörningsfunktionen gör det möjligt
-        ///att se pågående vägarbeten som påverkar cykelbanor. Om du upptäckt ett fel i appen Cykelstaden anmäler du det genom
-        ///felanmälningsfunktionen..
+        ///   Looks up a localized string similar to Cykelstaden är framtagen av trafikkontoret i Göteborgs Stad för att förenkla cyklistens vardag. I Cykelstaden hittar du lånecyklarna Styr &amp; Ställ, cykelvägar, cykelparkeringar samt stadens alla offentliga cykelpumpar. Du kan även planera din resväg och anmäla skador, hinder eller andra defekter som du upptäckt på cykelbanan. Trafikstörningsfunktionen gör det möjligt att se pågående vägarbeten som påverkar cykelbanor. 
+        ///Om du upptäckt ett fel i appen Cykelstaden anmäler du det genom felanmälningsfunktionen..
         /// </summary>
         public static string BikeCityDesc {
             get {
@@ -183,15 +181,6 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Klar.
-        /// </summary>
-        public static string Done {
-            get {
-                return ResourceManager.GetString("Done", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Engelska.
         /// </summary>
         public static string English {
@@ -201,8 +190,9 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to I felanmälningsformuläret kan du anmäla skador, defekter, hinder eller liknande som du upptäckt på cykelbanor inom Göteborg Stad. Felanmälan skicka till Göteborgs Stads kontaktcenter där ärendet skickas vidare till den handläggare som ansvarar för din fråga. När du skickar en fråga via felanmälningsformuläret registreras din fråga som en allmän handling i Göteborgs Stad. Allmänna handlingar är dokument som alla medborgare har tillgång till och rätt att begära ut och läsa.
-        ///Att din fråga blir en allmän handl [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to I felanmälningsformuläret kan du anmäla skador, defekter, hinder eller liknande som du upptäckt på cykelbanor inom Göteborg Stad. Felanmälan skicka till Göteborgs Stads kontaktcenter där ärendet skickas vidare till den handläggare som ansvarar för din fråga. När du skickar en fråga via felanmälningsformuläret registreras din fråga som en allmän handling i Göteborgs Stad. 
+        ///Allmänna handlingar är dokument som alla medborgare har tillgång till och rätt att begära ut och läsa.
+        ///Att din fråga blir en allmän han [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ErrorRepDesc {
             get {
@@ -301,6 +291,15 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ok.
+        /// </summary>
+        public static string Ok {
+            get {
+                return ResourceManager.GetString("Ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  eller ringa .
         /// </summary>
         public static string OrCall {
@@ -310,9 +309,8 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to När du använder appen samlas inga andra uppgifter in än de som du väljer att ange om du gör en felanmälan.
-        ///När du skickar in en felanmälan ska du ange en GPS-position för felet genom att ange en adress eller välja din aktuella position.
-        ///Felets position behövs för att felet ska kunna åtgärdas. Har du GPS:en påslagen används dessa uppgifter genom att du samtycker till att appen får använda din position. Du kan när som helst ta tillbaka ditt samtycke genom att välja att inte låta appen använda din position.  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to När du använder appen samlas inga andra uppgifter in än de som du väljer att ange om du gör en felanmälan. När du skickar in en felanmälan ska du ange en GPS-position för felet genom att ange en adress eller välja din aktuella position. Felets position behövs för att felet ska kunna åtgärdas. Har du GPS:en påslagen används dessa uppgifter genom att du samtycker till att appen får använda din position. 
+        ///Du kan när som helst ta tillbaka ditt samtycke genom att välja att inte låta appen använda din position.  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string PersonalDataDesc {
             get {
@@ -357,7 +355,7 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSTÄLLNINGAR.
+        ///   Looks up a localized string similar to Inställningar.
         /// </summary>
         public static string Settings {
             get {
@@ -411,10 +409,10 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to | Trafikstörningar ser du vägarbeten som har stor påverkan på de cykelbanor i Göteborg som trafikkontoret ansvarar för.
-        ///Klicka på trafikstörningssymbolen för att läsa mer om arbetet samt hur framkomligheten för dig som cyklist påverkas.
-        ///Det är bara de trafikstörningar som har stor påverkan på cykelbanorna i Göteborg som visas i appen. Informationen hämtas
-        ///automatiskt och kan innehålla vissa avvikelser eller felaktigheter. Giltighetstiden avser den period som entreprenören har tillstånd att göra ingrepp s [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to | Trafikstörningar ser du vägarbeten som har stor påverkan på de cykelbanor i Göteborg som trafikkontoret ansvarar för. 
+        ///Klicka på trafikstörningssymbolen för att läsa mer om arbetet samt hur framkomligheten för dig som cyklist påverkas. 
+        ///Det är bara de trafikstörningar som har stor påverkan på cykelbanorna i Göteborg som visas i appen. Informationen hämtas automatiskt och kan innehålla vissa avvikelser eller felaktigheter. 
+        ///Giltighetstiden avser den period som entreprenören har tillstånd att göra ingrep [rest of string was truncated]&quot;;.
         /// </summary>
         public static string TrafficDisDesc {
             get {

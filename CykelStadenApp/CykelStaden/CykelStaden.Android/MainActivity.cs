@@ -2,7 +2,8 @@
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
-using Acr.UserDialogs;
+using Plugin.Messaging;
+using Plugin.Permissions;
 
 namespace CykelStaden.Droid
 {
@@ -15,12 +16,16 @@ namespace CykelStaden.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            UserDialogs.Init(this);
+            CrossMessaging.Current.Settings().Phone.AutoDial = true;
+            AiForms.Dialogs.Dialogs.Init(this);
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            // Needed to request permissions at startup
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }

@@ -38,6 +38,7 @@ namespace CykelStaden
         {
             InitializeComponent();
             drawerNavItems();
+            LanguageChangedEvent();
         }
 
         /// <summary>
@@ -83,26 +84,37 @@ namespace CykelStaden
             {
                 case 0:
                     settingsPage.IsVisible = false;
-                    headerLabel.Text = Lang.Map;
+                    headerLabel.Text = Lang.Map.ToUpper();
                     break;
 
                 case 1:
                     settingsPage.IsVisible = false;
-                    headerLabel.Text = Lang.ErrorReport;
+                    headerLabel.Text = Lang.ErrorReport.ToUpper();
                     break;
 
                 case 2:
                     settingsPage.IsVisible = true;
-                    headerLabel.Text = Lang.Settings;
+                    headerLabel.Text = Lang.Settings.ToUpper();
                     break;
 
                 default:
                     settingsPage.IsVisible = false;
-                    headerLabel.Text = Lang.AppName;
+                    headerLabel.Text = Lang.AppName.ToUpper();
                     break;
             }
 
             navigationDrawer.ToggleDrawer();
+        }
+
+        //Here we subscribe to the LanguageChangedEvent
+        //and we update the menu list with the translated values.
+        private void LanguageChangedEvent()
+        {
+            MessagingCenter.Subscribe<object, string>(this, "LanguageChanged", (sender, arg) =>
+            {
+                drawerNavItems();
+                headerLabel.Text = Lang.Settings.ToUpper();
+            });
         }
     }
 

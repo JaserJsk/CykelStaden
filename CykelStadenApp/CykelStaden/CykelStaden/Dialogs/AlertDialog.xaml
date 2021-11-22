@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<extra:DialogView
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CykelStaden.Dialogs.AlertDialog"
+    xmlns:local="clr-namespace:CykelStaden.Dialogs"
+    xmlns:extra="clr-namespace:AiForms.Dialogs.Abstractions;assembly=AiForms.Dialogs"
+    xmlns:controls="clr-namespace:CykelStaden.Controls"
+    CornerRadius="10" OffsetX="0" OffsetY="0" UseCurrentPageLocation="false" 
+    VerticalLayoutAlignment="Center" HorizontalLayoutAlignment="Center" >
+
+    <controls:CustomShadowFrame Margin="16" 
+                                Padding="16"
+                                HasShadow="True"
+                                CornerRadius="10"
+                                BackgroundColor="{DynamicResource GrayShadowBackgroundColor}" 
+                                BorderColor="{DynamicResource GrayShadowBackgroundColor}">
+        
+        <Grid ColumnDefinitions="Auto, *, Auto"
+              ColumnSpacing="0"
+              RowSpacing="0" 
+              WidthRequest="{Binding Source={x:Static local:AlertDialog.DialogWidth}}">
+            
+            <!-- Title -->
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Margin="0,12"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"
+                   FontFamily="Montserrat-Medium"
+                   Text="{Binding Title}"
+                   Style="{StaticResource TitleLabelStyle}"
+                   TextColor="{DynamicResource Gray-800}"/>
+
+            <!--  Icon  -->
+            <Label Grid.Row="0" 
+                   Grid.Column="2"
+                   HorizontalOptions="End"
+                   FontFamily="Material-Outlined"
+                   Style="{StaticResource IconLabelStyle}"
+                   Text="{Binding Icon}" />
+
+            <!--  Description  -->
+            <Label Grid.Row="1" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   HorizontalOptions="StartAndExpand"
+                   FontFamily="Montserrat-Medium"
+                   Text="{Binding Desc}"
+                   Style="{StaticResource DescriptionLabelStyle}"
+                   TextColor="{DynamicResource Gray-800}"/>
+
+            <!--  Deny Button -->
+            <Label Grid.Row="2" 
+                   Grid.Column="1"
+                   Margin="0,16,0,0"
+                   FontAttributes="Bold"
+                   HorizontalOptions="StartAndExpand"
+                   FontFamily="Montserrat-Medium"
+                   Text="{Binding Deny}" 
+                   TextColor="{DynamicResource Gray-800}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CancelAndClose_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <!--  Confirm Button -->
+            <Label Grid.Row="2" 
+                   Grid.Column="2"
+                   Margin="0,16,0,0"
+                   FontAttributes="Bold"
+                   HorizontalOptions="EndAndExpand"
+                   FontFamily="Montserrat-Medium"
+                   Text="{Binding Confirm}" 
+                   TextColor="{DynamicResource Gray-800}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="AcceptAndClose_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </Grid>
+        
+    </controls:CustomShadowFrame>
+
+</extra:DialogView>

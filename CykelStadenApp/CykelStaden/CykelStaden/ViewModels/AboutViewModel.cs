@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Plugin.Messaging;
+using System;
 using System.Runtime.Serialization;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -13,8 +15,6 @@ namespace CykelStaden.ViewModels.About
     public class AboutViewModel : BaseViewModel
     {
         #region Fields
-
-        private static AboutViewModel aboutViewModel;
 
         #endregion
 
@@ -43,12 +43,22 @@ namespace CykelStaden.ViewModels.About
 
         private void EmailClicked(object obj)
         {
-            Console.WriteLine("Sending Email");
+            var emailAddress = "goteborg@goteborg.se";
+            var emailer = CrossMessaging.Current.EmailMessenger;
+            if (emailer.CanSendEmail)
+            {
+                emailer.SendEmail(emailAddress);
+            }
         }
 
         private void PhoneClicked(object obj)
         {
-            Console.WriteLine("Making a phonecall");
+            var phoneNumber = "031-3650000";
+            var phoneDialer = CrossMessaging.Current.PhoneDialer;
+            if (phoneDialer.CanMakePhoneCall)
+            {
+                phoneDialer.MakePhoneCall(phoneNumber);
+            }
         }
 
         #endregion

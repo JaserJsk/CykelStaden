@@ -1,5 +1,9 @@
 using System.Resources;
 using Xamarin.Forms;
+using Plugin.Permissions;
+using System.Threading.Tasks;
+using static Xamarin.Essentials.Permissions;
+using Xamarin.Essentials;
 
 [assembly: NeutralResourcesLanguage("sv-SE")]
 [assembly: ExportFont("MaterialIcons-Regular.ttf", Alias = "Material-Regular")]
@@ -11,8 +15,6 @@ using Xamarin.Forms;
 [assembly: ExportFont("UIFontIcons.ttf", Alias = "FontIcons")]
 namespace CykelStaden
 {
-    using Xamarin.Forms;
-
     /// <summary>
     /// Defines the <see cref="App" />.
     /// </summary>
@@ -39,11 +41,24 @@ namespace CykelStaden
             };
         }
 
+        
+
         /// <summary>
         /// The OnStart.
         /// </summary>
         protected override void OnStart()
         {
+            if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.iOS)
+            {
+                AskForRelevantPermissionsAsync();
+            }
+            else if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android)
+            {
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    await AskForRelevantPermissionsAsync();
+                });
+            }
         }
 
         /// <summary>
@@ -59,5 +74,39 @@ namespace CykelStaden
         protected override void OnResume()
         {
         }
+
+        #region Permissions
+
+        private async Task AskForRelevantPermissionsAsync()
+        {
+            await AskForPermissionAsync<Permissions.Phone>();
+            //await AskForPermissionAsync<Permissions.Camera>();
+            //await AskForPermissionAsync<Permissions.Media>();
+            //await AskForPermissionAsync<Permissions.LocationAlways>();
+            //await AskForPermissionAsync<Permissions.StorageRead>();
+            //await AskForPermissionAsync<Permissions.StorageWrite>();
+        }
+
+        private async Task AskForPermissionAsync<TPermission>()
+              where TPermission : Permissions.BasePermission, new()
+        {
+            var result = await CheckStatusAsync<TPermission>();
+            if (result != PermissionStatus.Granted)
+                await RequestAsync<TPermission>();
+        }
+
+        public async Task<PermissionStatus> CheckAndRequestPermissionAsync<T>(T permission)
+            where T : Permissions.BasePermission
+        {
+            var status = await permission.CheckStatusAsync();
+            if (status != PermissionStatus.Granted)
+            {
+                status = await permission.RequestAsync();
+            }
+
+            return status;
+        }
+
+        #endregion
     }
 }

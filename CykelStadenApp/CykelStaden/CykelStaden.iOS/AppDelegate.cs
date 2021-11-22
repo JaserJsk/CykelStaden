@@ -1,14 +1,8 @@
-using Syncfusion.SfRating.XForms.iOS;
-using Syncfusion.XForms.iOS.ComboBox;
-using Syncfusion.XForms.iOS.TextInputLayout;
-using Syncfusion.XForms.iOS.Border;
-using Syncfusion.XForms.iOS.Core;
-using Syncfusion.ListView.XForms.iOS;
-using Syncfusion.XForms.iOS.Graphics;
-using Syncfusion.XForms.iOS.Buttons;
-
 using Foundation;
 using UIKit;
+using Syncfusion.XForms.iOS.Core;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.XForms.iOS.Buttons;
 
 namespace CykelStaden.iOS
 {
@@ -30,16 +24,17 @@ namespace CykelStaden.iOS
             new Syncfusion.SfNavigationDrawer.XForms.iOS.SfNavigationDrawerRenderer();
 
             global::Xamarin.Forms.Forms.Init();
-            SfRatingRenderer.Init();
+            //SfRatingRenderer.Init();
             SfListViewRenderer.Init();
-            SfComboBoxRenderer.Init();
-            SfTextInputLayoutRenderer.Init();
+            //SfComboBoxRenderer.Init();
+            //SfTextInputLayoutRenderer.Init();
             SfAvatarViewRenderer.Init();
-            SfBorderRenderer.Init();
-            SfSegmentedControlRenderer.Init();
-            SfRadioButtonRenderer.Init();
-            SfGradientViewRenderer.Init();
+            //SfBorderRenderer.Init();
+            //SfSegmentedControlRenderer.Init();
+            //SfRadioButtonRenderer.Init();
+            //SfGradientViewRenderer.Init();
             SfButtonRenderer.Init();
+            AiForms.Dialogs.Dialogs.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

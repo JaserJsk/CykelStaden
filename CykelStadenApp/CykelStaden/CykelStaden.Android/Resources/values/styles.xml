@@ -2,27 +2,30 @@
 <resources>
 
   <style name="MainTheme" parent="MainTheme.Base">
-    <!-- As of Xamarin.Forms 4.6 the theme has moved into the Forms binary -->
-    <!-- If you want to override anything you can do that here. -->
-    <!-- Underneath are a couple of entries to get you started. -->
-
-    <!-- Set theme colors from https://aka.ms/material-colors -->
-    
-    <!-- colorPrimary is used for the default action bar background -->
-    <!-- <item name="colorPrimary">#2196F3</item>-->
-    
-    <!-- colorPrimaryDark is used for the status bar -->
-    <!-- <item name="colorPrimaryDark">#1976D2</item>-->
-    
-    <!-- colorAccent is used as the default value for colorControlActivated
-         which is used to tint widgets -->
-    <item name="colorAccent">#3E94FF</item>
-
-    <!-- To set the color of the statusbar on android -->
-    <item name="android:statusBarColor">#3E94FF</item>
-
-    <!-- To remove the ugly default selection color on listviews -->
-    <item name="android:colorActivatedHighlight">#FFFFFF</item>
-    
-  </style>
+	  <!-- As of Xamarin.Forms 4.6 the theme has moved into the Forms binary -->
+	  <!-- If you want to override anything you can do that here. -->
+	  <!-- Underneath are a couple of entries to get you started. -->
+	  
+	  <!-- Set theme colors from https://aka.ms/material-colors -->
+	  
+	  <!-- colorPrimary is used for the default action bar background -->
+	  <!-- <item name="colorPrimary">#2196F3</item>-->
+	  
+	  <!-- colorPrimaryDark is used for the status bar -->
+	  <!-- <item name="colorPrimaryDark">#1976D2</item>-->
+	  
+	  <!-- colorAccent is used as the default value for colorControlActivated which is used to tint widgets -->
+	  <item name="colorAccent">#3E94FF</item>
+	  
+	  <!-- To set the color of the statusbar on android -->
+	  <item name="android:statusBarColor">#3E94FF</item>
+	  
+	  <!-- To remove the ugly default selection color on listviews -->
+	  <item name="android:colorActivatedHighlight">#FFFFFF</item>
+	  
+	  <!-- To not allow forced darkmode -->
+	  <item name="android:forceDarkAllowed">false</item>
+	  
+    </style>
+	
 </resources>
