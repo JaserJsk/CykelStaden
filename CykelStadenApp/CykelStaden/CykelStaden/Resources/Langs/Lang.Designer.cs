@@ -337,6 +337,15 @@ namespace CykelStaden.Resources.Langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vänligen vänta medan appen laddas.
+        /// </summary>
+        public static string PleaseWait {
+            get {
+                return ResourceManager.GetString("PleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Integritetspolicy.
         /// </summary>
         public static string PrivacyPolicy {

@@ -1,6 +1,5 @@
-﻿using AiForms.Dialogs.Abstractions;
-using System;
-using Xamarin.Essentials;
+﻿using System;
+using AiForms.Dialogs.Abstractions;
 using Xamarin.Forms.Xaml;
 
 namespace CykelStaden.Dialogs
@@ -8,8 +7,6 @@ namespace CykelStaden.Dialogs
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AlertDialog : DialogView
     {
-        public static double DialogWidth = DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density * 0.7;
-
         public AlertDialog()
         {
             InitializeComponent();

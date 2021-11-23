@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="CykelStaden.Views.AboutPage"
-             xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:helpers="clr-namespace:CykelStaden.Helpers"
-             xmlns:resources="clr-namespace:CykelStaden.Resources.Langs"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             xmlns:controls="clr-namespace:CykelStaden.Controls"
-             xmlns:viewmodels="clr-namespace:CykelStaden.ViewModels"
-             ios:Page.UseSafeArea="true"
-             NavigationPage.HasNavigationBar="True"
-             BackgroundColor="{DynamicResource Gray-Bg}">
+<ContentPage
+    x:Class="CykelStaden.Views.AboutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:CykelStaden.Controls"
+    xmlns:helpers="clr-namespace:CykelStaden.Helpers"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:resources="clr-namespace:CykelStaden.Resources.Langs"
+    ios:Page.UseSafeArea="true"
+    BackgroundColor="{DynamicResource Gray-Bg}"
+    NavigationPage.HasNavigationBar="True">
 
     <ContentPage.Content>
         <Grid
@@ -22,9 +22,9 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
                 <StackLayout
-                    Spacing="0"
                     Padding="0,20,0,20"
                     HorizontalOptions="Center"
+                    Spacing="0"
                     VerticalOptions="Center">
 
                     <!--  Product image  -->
@@ -47,89 +47,108 @@
                         VerticalOptions="Start"
                         VerticalTextAlignment="Start" />
 
-                    <controls:CustomShadowFrame Margin="16,16,16,0" 
-                                                Padding="16"
-                                                HasShadow="True"
-                                                CornerRadius="10"
-                                                BackgroundColor="{DynamicResource GrayShadowColor}" 
-                                                BorderColor="{DynamicResource GrayShadowColor}">
+                    <controls:CustomShadowFrame
+                        Margin="16,16,16,0"
+                        Padding="16"
+                        BackgroundColor="{DynamicResource GrayShadowColor}"
+                        BorderColor="{DynamicResource GrayShadowColor}"
+                        CornerRadius="10"
+                        HasShadow="True">
 
                         <StackLayout>
                             <!--  Bikecity Title & Description  -->
-                            <Label Margin="0,16,0,0" 
-                                   LineHeight="{OnPlatform Android=1.25, Default=-1}"
-                                   Style="{StaticResource TitleLabelStyle}"
-                                   Text="{helpers:Translate BikeCityTitle}" />
+                            <Label
+                                Margin="0,16,0,0"
+                                LineHeight="{OnPlatform Android=1.25,
+                                                        Default=-1}"
+                                Style="{StaticResource TitleLabelStyle}"
+                                Text="{helpers:Translate BikeCityTitle}" />
 
-                            <Label HorizontalTextAlignment="Start"
-                                   Style="{StaticResource DescriptionLabelStyle}"
-                                   Text="{helpers:Translate BikeCityDesc}" />
-                            
+                            <Label
+                                HorizontalTextAlignment="Start"
+                                Style="{StaticResource DescriptionLabelStyle}"
+                                Text="{helpers:Translate BikeCityDesc}" />
+
                             <!--  TrafficDis Title & Description  -->
-                            <Label Margin="0,16,0,0" 
-                                   LineHeight="{OnPlatform Android=1.25, Default=-1}"
-                                   Style="{StaticResource TitleLabelStyle}"
-                                   Text="{helpers:Translate TrafficDisTitle}" />
+                            <Label
+                                Margin="0,16,0,0"
+                                LineHeight="{OnPlatform Android=1.25,
+                                                        Default=-1}"
+                                Style="{StaticResource TitleLabelStyle}"
+                                Text="{helpers:Translate TrafficDisTitle}" />
 
-                            <Label HorizontalTextAlignment="Start"
-                                   Style="{StaticResource DescriptionLabelStyle}"
-                                   Text="{helpers:Translate TrafficDisDesc}" />
-                            
-                            <!--  SteerSet Title & Description -->
-                            <Label Margin="0,16,0,0" 
-                                   LineHeight="{OnPlatform Android=1.25, Default=-1}"
-                                   Style="{StaticResource TitleLabelStyle}"
-                                   Text="{helpers:Translate SteerSetTitle}" />
+                            <Label
+                                HorizontalTextAlignment="Start"
+                                Style="{StaticResource DescriptionLabelStyle}"
+                                Text="{helpers:Translate TrafficDisDesc}" />
 
-                            <Label HorizontalTextAlignment="Start"
-                                   Style="{StaticResource DescriptionLabelStyle}"
-                                   Text="{helpers:Translate SteerSetDesc}" />
-                            
+                            <!--  SteerSet Title & Description  -->
+                            <Label
+                                Margin="0,16,0,0"
+                                LineHeight="{OnPlatform Android=1.25,
+                                                        Default=-1}"
+                                Style="{StaticResource TitleLabelStyle}"
+                                Text="{helpers:Translate SteerSetTitle}" />
+
+                            <Label
+                                HorizontalTextAlignment="Start"
+                                Style="{StaticResource DescriptionLabelStyle}"
+                                Text="{helpers:Translate SteerSetDesc}" />
+
                             <!--  ErrorRep Title & Description  -->
-                            <Label Margin="0,16,0,0" 
-                                   LineHeight="{OnPlatform Android=1.25, Default=-1}"
-                                   Style="{StaticResource TitleLabelStyle}"
-                                   Text="{helpers:Translate ErrorRepTitle}" />
+                            <Label
+                                Margin="0,16,0,0"
+                                LineHeight="{OnPlatform Android=1.25,
+                                                        Default=-1}"
+                                Style="{StaticResource TitleLabelStyle}"
+                                Text="{helpers:Translate ErrorRepTitle}" />
 
-                            <Label HorizontalTextAlignment="Start"
-                                   Style="{StaticResource DescriptionLabelStyle}"
-                                   Text="{helpers:Translate ErrorRepDesc}" />
+                            <Label
+                                HorizontalTextAlignment="Start"
+                                Style="{StaticResource DescriptionLabelStyle}"
+                                Text="{helpers:Translate ErrorRepDesc}" />
 
                             <!--  PersonalData Title & Description  -->
-                            <Label Margin="0,16,0,0" 
-                                   LineHeight="{OnPlatform Android=1.25, Default=-1}"
-                                   Style="{StaticResource TitleLabelStyle}"
-                                   Text="{helpers:Translate PersonalDataTitle}" />
+                            <Label
+                                Margin="0,16,0,0"
+                                LineHeight="{OnPlatform Android=1.25,
+                                                        Default=-1}"
+                                Style="{StaticResource TitleLabelStyle}"
+                                Text="{helpers:Translate PersonalDataTitle}" />
 
-                            <Label HorizontalTextAlignment="Start"
-                                   Style="{StaticResource DescriptionLabelStyle}"
-                                   Text="{helpers:Translate PersonalDataDesc}" />
-                            
+                            <Label
+                                HorizontalTextAlignment="Start"
+                                Style="{StaticResource DescriptionLabelStyle}"
+                                Text="{helpers:Translate PersonalDataDesc}" />
+
                             <!--  AccessibilityRep Title & Description  -->
-                            <Label Margin="0,16,0,0" 
-                                   LineHeight="{OnPlatform Android=1.25, Default=-1}"
-                                   Style="{StaticResource TitleLabelStyle}"
-                                   Text="{helpers:Translate AccessibilityRepTitle}" />
+                            <Label
+                                Margin="0,16,0,0"
+                                LineHeight="{OnPlatform Android=1.25,
+                                                        Default=-1}"
+                                Style="{StaticResource TitleLabelStyle}"
+                                Text="{helpers:Translate AccessibilityRepTitle}" />
 
-                            <Label HorizontalTextAlignment="Start"
-                                   Style="{StaticResource DescriptionLabelStyle}">
+                            <Label HorizontalTextAlignment="Start" Style="{StaticResource DescriptionLabelStyle}">
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span Text="{x:Static resources:Lang.AccessibilityRepDesc}" />
 
-                                        <Span x:Name="emailAddress" 
-                                              Text="goteborg@goteborg.se" 
-                                              TextColor="{DynamicResource HyperLink}">
+                                        <Span
+                                            x:Name="emailAddress"
+                                            Text="goteborg@goteborg.se"
+                                            TextColor="{DynamicResource HyperLink}">
                                             <Span.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding EmailCommand}" CommandParameter="{Binding emailAddress}" />
                                             </Span.GestureRecognizers>
                                         </Span>
-                                        
+
                                         <Span Text="{helpers:Translate OrCall}" />
-                                        
-                                        <Span x:Name="phoneNumber" 
-                                              Text="031-3650000" 
-                                              TextColor="{DynamicResource HyperLink}">
+
+                                        <Span
+                                            x:Name="phoneNumber"
+                                            Text="031-3650000"
+                                            TextColor="{DynamicResource HyperLink}">
                                             <Span.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding PhoneCommand}" CommandParameter="{Binding phoneNumber}" />
                                             </Span.GestureRecognizers>

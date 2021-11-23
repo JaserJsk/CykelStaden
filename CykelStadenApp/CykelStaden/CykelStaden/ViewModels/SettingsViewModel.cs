@@ -9,7 +9,6 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using CykelStaden.Dialogs;
@@ -23,11 +22,6 @@ namespace CykelStaden.ViewModels
     public class SettingsViewModel : BaseViewModel
     {
         #region Fields
-
-        /// <summary>
-        /// Defines the PickerWidth.
-        /// </summary>
-        public static double PickerWidth = DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density * 0.8;
 
         /// <summary>
         /// Defines the toggleTheme.
@@ -54,16 +48,17 @@ namespace CykelStaden.ViewModels
                 LocalizationResourceManager.Instance.SetCulture(CultureInfo.GetCultureInfo(SelectedLanguage.LangCI));
                 LoadLanguages();
 
-                // Here we send the message to all the events that subscribed to the "LanguageChanged" key,
-                // that the language has been changed.
+                // Telling all the subscribers to the "LanguageChanged" key, that the language has been changed.
                 MessagingCenter.Send<object, string>(this, "LanguageChanged", "");
 
                 // This is using the AI-Forms to display a custom dialog.
-                var langAlert = await Dialog.Instance.ShowAsync<AlertDialog>
-                (
-                    new { Title = Lang.LangChanged, Icon = IconFont.Translate, Desc = Lang.LangChangedDesc, Confirm = Lang.Ok }
-                );
-
+                await Dialog.Instance.ShowAsync<AlertDialog>(new
+                {
+                    Icon = IconFont.Translate,
+                    Title = Lang.LangChanged,
+                    Description = Lang.LangChangedDesc,
+                    Confirm = Lang.Ok
+                });
             });
 
             this.AboutCommand = new Command(this.AboutClicked);
@@ -212,6 +207,5 @@ namespace CykelStaden.ViewModels
         }
 
         #endregion
-
     }
 }

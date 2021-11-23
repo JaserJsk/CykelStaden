@@ -1,7 +1,5 @@
 ﻿using Plugin.Messaging;
-using System;
 using System.Runtime.Serialization;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 

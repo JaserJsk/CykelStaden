@@ -14,6 +14,5 @@ namespace CykelStaden.Models
             LangName = langName;
             LangCI = langCI;
         }
-        
     }
 }

@@ -1,6 +1,5 @@
 using System.Resources;
 using Xamarin.Forms;
-using Plugin.Permissions;
 using System.Threading.Tasks;
 using static Xamarin.Essentials.Permissions;
 using Xamarin.Essentials;
@@ -35,13 +34,12 @@ namespace CykelStaden
 
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage()) {
+            MainPage = new NavigationPage(new MainPage())
+            {
                 BarBackgroundColor = Color.FromHex("#3E94FF"),
                 BarTextColor = Color.FromHex("#ffffff")
             };
         }
-
-        
 
         /// <summary>
         /// The OnStart.
@@ -64,16 +62,12 @@ namespace CykelStaden
         /// <summary>
         /// The OnSleep.
         /// </summary>
-        protected override void OnSleep()
-        {
-        }
+        protected override void OnSleep() { }
 
         /// <summary>
         /// The OnResume.
         /// </summary>
-        protected override void OnResume()
-        {
-        }
+        protected override void OnResume() { }
 
         #region Permissions
 

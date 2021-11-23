@@ -214,6 +214,9 @@ Appen använder din GPS-position för att underlätta för dig som användare. L
   <data name="PersonalSettings" xml:space="preserve">
     <value>Personliga Inställningar</value>
   </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Vänligen vänta medan appen laddas</value>
+  </data>
   <data name="PrivacyPolicy" xml:space="preserve">
     <value>Integritetspolicy</value>
   </data>

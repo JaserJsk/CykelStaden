@@ -62,7 +62,6 @@ namespace CykelStaden.Models.About
             {
                 return this.designation;
             }
-
             set
             {
                 this.designation = value;
@@ -81,7 +80,6 @@ namespace CykelStaden.Models.About
             {
                 return App.ImageServerPath + this.image;
             }
-
             set
             {
                 this.image = value;

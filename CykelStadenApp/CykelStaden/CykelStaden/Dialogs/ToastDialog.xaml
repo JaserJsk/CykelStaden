@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<extra:ToastView
+    x:Class="CykelStaden.Dialogs.ToastDialog"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extra="clr-namespace:AiForms.Dialogs.Abstractions;assembly=AiForms.Dialogs"
+    BackgroundColor="Gray"
+    CornerRadius="15"
+    HorizontalLayoutAlignment="Center"
+    VerticalLayoutAlignment="Center"
+    Duration="{Binding Duration}">
+    <StackLayout Padding="10">
+        <Label
+            FontSize="Medium"
+            HorizontalTextAlignment="Center"
+            Text="{Binding ToastText}"
+            TextColor="White" />
+    </StackLayout>
+</extra:ToastView>

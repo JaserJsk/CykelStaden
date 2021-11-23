@@ -2,10 +2,14 @@
 using CykelStaden.Resources.Icons;
 using CykelStaden.Resources.Langs;
 using System.Collections.Generic;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
+using System.Threading.Tasks;
+using CykelStaden.Interfaces;
+using CykelStaden.Helpers;
+using CykelStaden.Dialogs;
+using AiForms.Dialogs;
 
 namespace CykelStaden
 {
@@ -16,30 +20,23 @@ namespace CykelStaden
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
-        /// <summary>
-        /// Defines the DrawerHeaderWidth.
-        /// </summary>
-        public static double DrawerHeaderWidth = DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density * 0.8;
+        #region Fields
+        private IDialog dialogHelper => DialogHelper.Instance;
+        #endregion
 
-        /// <summary>
-        /// Defines the DrawerHeaderHeight.
-        /// </summary>
-        public static double DrawerHeaderHeight = DeviceDisplay.MainDisplayInfo.Height / DeviceDisplay.MainDisplayInfo.Density * 0.25;
-
-        /// <summary>
-        /// Defines the DrawerFooterHeight.
-        /// </summary>
-        public static double DrawerFooterHeight = DeviceDisplay.MainDisplayInfo.Height / DeviceDisplay.MainDisplayInfo.Density * 0.10;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MainPage"/> class.
-        /// </summary>
+        #region Constructor
         public MainPage()
         {
             InitializeComponent();
             drawerNavItems();
             LanguageChangedEvent();
+
+            DisplayLoadingMessage();
         }
+
+        #endregion
+
+        #region Methods
 
         /// <summary>
         /// The drawerNavItems.
@@ -47,17 +44,20 @@ namespace CykelStaden
         private void drawerNavItems()
         {
             List<MenuItem> itemList = new List<MenuItem>();
-            itemList.Add(new MenuItem { 
-                ItemIcon = IconFont.LocationOn, 
-                ItemName = Lang.Map 
+            itemList.Add(new MenuItem
+            {
+                ItemIcon = IconFont.LocationOn,
+                ItemName = Lang.Map
             });
-            itemList.Add(new MenuItem { 
-                ItemIcon = IconFont.Report, 
-                ItemName = Lang.ErrorReport 
+            itemList.Add(new MenuItem
+            {
+                ItemIcon = IconFont.Report,
+                ItemName = Lang.ErrorReport
             });
-            itemList.Add(new MenuItem { 
-                ItemIcon = IconFont.Settings, 
-                ItemName = Lang.Settings 
+            itemList.Add(new MenuItem
+            {
+                ItemIcon = IconFont.Settings,
+                ItemName = Lang.Settings
             });
 
             listView.ItemsSource = itemList;
@@ -85,11 +85,13 @@ namespace CykelStaden
                 case 0:
                     settingsPage.IsVisible = false;
                     headerLabel.Text = Lang.Map.ToUpper();
+                    DisplayToast("This is map screen", 3000);
                     break;
 
                 case 1:
                     settingsPage.IsVisible = false;
                     headerLabel.Text = Lang.ErrorReport.ToUpper();
+                    DisplayToast("This is error screen", 3000);
                     break;
 
                 case 2:
@@ -106,8 +108,9 @@ namespace CykelStaden
             navigationDrawer.ToggleDrawer();
         }
 
-        //Here we subscribe to the LanguageChangedEvent
-        //and we update the menu list with the translated values.
+        /// <summary>
+        /// Defines the <see cref="LanguageChangedEvent" />.
+        /// </summary>
         private void LanguageChangedEvent()
         {
             MessagingCenter.Subscribe<object, string>(this, "LanguageChanged", (sender, arg) =>
@@ -116,21 +119,66 @@ namespace CykelStaden
                 headerLabel.Text = Lang.Settings.ToUpper();
             });
         }
+
+        /// <summary>
+        /// Defines the <see cref="OnDisappearing" />.
+        /// </summary>
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            MessagingCenter.Unsubscribe<MainPage>(this, "LanguageChanged");
+            MessagingCenter.Unsubscribe<MainPage>(this, "ThemeIsDark");
+            MessagingCenter.Unsubscribe<MainPage>(this, "ThemeIsLight");
+        }
+
+        /// <summary>
+        /// Defines the <see cref="DisplayLoadingMessage" />.
+        /// </summary>
+        private async Task DisplayLoadingMessage()
+        {
+            dialogHelper.DisplayLoadingMessage(Lang.PleaseWait);
+            await Task.Delay(5000);
+            dialogHelper.HideLoading();
+
+            //await dialogHelper.DisplayLoadingWithProgressAsync(progress => ReportProgress(progress), Lang.PleaseWait);
+        }
+
+        /// <summary>
+        /// Defines the <see cref="ReportProgress" />.
+        /// </summary>
+        private async Task ReportProgress(IProgress<double> progress)
+        {
+            for (var i = 0; i < 100; i++)
+            {
+                await Task.Delay(50);
+                progress.Report((i + 1) * 0.01d);
+            }
+        }
+
+        /// <summary>
+        /// Defines the <see cref="DisplayToast" />.
+        /// </summary>
+        public void DisplayToast(string toastText, int duration)
+        {
+            Toast.Instance.Show<ToastDialog>(new
+            {
+                ToastText = toastText,
+                Duration = duration
+            });
+        }
+
+        #endregion
     }
 
+    #region External Class
     /// <summary>
     /// Defines the <see cref="MenuItem" />.
     /// </summary>
     internal class MenuItem
     {
-        /// <summary>
-        /// Gets or sets the ItemIcon.
-        /// </summary>
         public string ItemIcon { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ItemName.
-        /// </summary>
         public string ItemName { get; set; }
     }
+    #endregion
 }

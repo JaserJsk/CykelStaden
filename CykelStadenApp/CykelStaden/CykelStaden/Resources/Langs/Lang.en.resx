@@ -213,6 +213,9 @@ Read about how the traffic office treats yours personal data</value>
   <data name="PersonalSettings" xml:space="preserve">
     <value>Personal Settings</value>
   </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Please wait while app is loading</value>
+  </data>
   <data name="PrivacyPolicy" xml:space="preserve">
     <value>Privacy &amp; Policy</value>
   </data>
