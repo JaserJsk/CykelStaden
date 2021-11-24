@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "LoqsH/HyfDbBTOJEmpekyr76aZ3H/C9kAvNTzX6g9qmVXZsTUSfJBs83yY83ENaLeNVUwcdRRYyGfWqwJz3l1Q==",
+  "success": true,
+  "projectFilePath": "D:\\Development\\Projects\\Github VS\\Cykelstaden.XF[Redesign]\\Cykelstaden.XF\\Cykelstaden.XF\\Cykelstaden.XF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jaser\\.nuget\\packages\\aiforms.dialogs\\1.0.13\\aiforms.dialogs.1.0.13.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\syncfusion.licensing\\19.3.0.55\\syncfusion.licensing.19.3.0.55.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\syncfusion.xamarin.buttons\\19.3.0.55\\syncfusion.xamarin.buttons.19.3.0.55.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\syncfusion.xamarin.core\\19.3.0.55\\syncfusion.xamarin.core.19.3.0.55.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\syncfusion.xamarin.datasource\\19.3.0.55\\syncfusion.xamarin.datasource.19.3.0.55.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\19.3.0.55\\syncfusion.xamarin.gridcommon.19.3.0.55.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\syncfusion.xamarin.sfcombobox\\19.3.0.55\\syncfusion.xamarin.sfcombobox.19.3.0.55.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\syncfusion.xamarin.sflistview\\19.3.0.55\\syncfusion.xamarin.sflistview.19.3.0.55.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\syncfusion.xamarin.sfnavigationdrawer\\19.3.0.55\\syncfusion.xamarin.sfnavigationdrawer.19.3.0.55.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\syncfusion.xamarin.sfrating\\19.3.0.55\\syncfusion.xamarin.sfrating.19.3.0.55.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\xam.plugins.messaging\\5.2.0\\xam.plugins.messaging.5.2.0.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Jaser\\.nuget\\packages\\xamarin.forms\\5.0.0.2244\\xamarin.forms.5.0.0.2244.nupkg.sha512"
+  ],
+  "logs": []
+}
