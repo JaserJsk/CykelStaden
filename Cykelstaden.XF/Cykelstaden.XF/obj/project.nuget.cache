@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LoqsH/HyfDbBTOJEmpekyr76aZ3H/C9kAvNTzX6g9qmVXZsTUSfJBs83yY83ENaLeNVUwcdRRYyGfWqwJz3l1Q==",
+  "dgSpecHash": "GT4+7UeKjrdXal+FUEQgLTuvcI146nLFlPmkZIPLlqK9dZ4ip81b+A8zo7bkaNNR7jF6VHhEUNilgO2tItsMhg==",
   "success": true,
-  "projectFilePath": "D:\\Development\\Projects\\Github VS\\Cykelstaden.XF[Redesign]\\Cykelstaden.XF\\Cykelstaden.XF\\Cykelstaden.XF.csproj",
+  "projectFilePath": "D:\\Development\\Projects\\Github VS\\Cykelstaden-Redesign\\Cykelstaden.XF\\Cykelstaden.XF\\Cykelstaden.XF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jaser\\.nuget\\packages\\aiforms.dialogs\\1.0.13\\aiforms.dialogs.1.0.13.nupkg.sha512",
     "C:\\Users\\Jaser\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

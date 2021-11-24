@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TtOUj51m8bNav0KAypgT2lWAi7QIoQdOVcuXteG9hAEQEox/bv7aBElu0wBhXDj1DhFXFVyhG2ZwezVKmrLZVA==",
+  "dgSpecHash": "oZTBOGNHGZCv00FvAnzn2fmQZgQBm1qwhLwC3sG6TZ597O9bMAJylr3yYiIqRtaRGLe6Nw9wqJnJIB30IGOetw==",
   "success": true,
-  "projectFilePath": "D:\\Development\\Projects\\Github VS\\Cykelstaden.XF[Redesign]\\Cykelstaden.XF\\Cykelstaden.XF.Android\\Cykelstaden.XF.Android.csproj",
+  "projectFilePath": "D:\\Development\\Projects\\Github VS\\Cykelstaden-Redesign\\Cykelstaden.XF\\Cykelstaden.XF.Android\\Cykelstaden.XF.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jaser\\.nuget\\packages\\aiforms.dialogs\\1.0.13\\aiforms.dialogs.1.0.13.nupkg.sha512",
     "C:\\Users\\Jaser\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",

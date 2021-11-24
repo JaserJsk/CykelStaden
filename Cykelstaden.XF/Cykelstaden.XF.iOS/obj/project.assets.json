@@ -6632,11 +6632,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\Projects\\Github VS\\Cykelstaden.XF[Redesign]\\Cykelstaden.XF\\Cykelstaden.XF.iOS\\Cykelstaden.XF.iOS.csproj",
+      "projectUniqueName": "D:\\Development\\Projects\\Github VS\\Cykelstaden-Redesign\\Cykelstaden.XF\\Cykelstaden.XF.iOS\\Cykelstaden.XF.iOS.csproj",
       "projectName": "Cykelstaden.XF.iOS",
-      "projectPath": "D:\\Development\\Projects\\Github VS\\Cykelstaden.XF[Redesign]\\Cykelstaden.XF\\Cykelstaden.XF.iOS\\Cykelstaden.XF.iOS.csproj",
+      "projectPath": "D:\\Development\\Projects\\Github VS\\Cykelstaden-Redesign\\Cykelstaden.XF\\Cykelstaden.XF.iOS\\Cykelstaden.XF.iOS.csproj",
       "packagesPath": "C:\\Users\\Jaser\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\Projects\\Github VS\\Cykelstaden.XF[Redesign]\\Cykelstaden.XF\\Cykelstaden.XF.iOS\\obj\\",
+      "outputPath": "D:\\Development\\Projects\\Github VS\\Cykelstaden-Redesign\\Cykelstaden.XF\\Cykelstaden.XF.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -6653,8 +6653,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Development\\Projects\\Github VS\\Cykelstaden.XF[Redesign]\\Cykelstaden.XF\\Cykelstaden.XF\\Cykelstaden.XF.csproj": {
-              "projectPath": "D:\\Development\\Projects\\Github VS\\Cykelstaden.XF[Redesign]\\Cykelstaden.XF\\Cykelstaden.XF\\Cykelstaden.XF.csproj"
+            "D:\\Development\\Projects\\Github VS\\Cykelstaden-Redesign\\Cykelstaden.XF\\Cykelstaden.XF\\Cykelstaden.XF.csproj": {
+              "projectPath": "D:\\Development\\Projects\\Github VS\\Cykelstaden-Redesign\\Cykelstaden.XF\\Cykelstaden.XF\\Cykelstaden.XF.csproj"
             }
           }
         }

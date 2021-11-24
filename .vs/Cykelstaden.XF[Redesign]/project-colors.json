@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c6ab64c3-ec94-4b0f-960c-8047ffb4148c": {
+      "ProjectGuid": "c6ab64c3-ec94-4b0f-960c-8047ffb4148c",
+      "DisplayName": "Cykelstaden.XF.iOS",
+      "ColorIndex": 0
+    },
+    "ea4820be-8019-4e29-9a95-3909df7d174f": {
+      "ProjectGuid": "ea4820be-8019-4e29-9a95-3909df7d174f",
+      "DisplayName": "Cykelstaden.XF.Android",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

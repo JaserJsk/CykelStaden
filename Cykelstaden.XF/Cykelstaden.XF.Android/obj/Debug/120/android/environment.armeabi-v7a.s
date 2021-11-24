@@ -23,8 +23,8 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.companyname.cykelstaden.xf"
-	.size	.L.env.str.1, 31
+	.asciz	"com.goteborg.cykelstaden"
+	.size	.L.env.str.1, 25
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
 	.p2align	2
@@ -99,7 +99,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"8bf1603e-1dc0-4b34-a859-e08dcb2c732d"
+	.asciz	"d6f3e676-8a31-4b30-8063-803bcd9ab585"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object

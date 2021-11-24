@@ -2,8 +2,8 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>
-    <SelectedDevice>iPhone-DX3DX09BKXK1</SelectedDevice>
-    <ActiveDebugProfile>iPhone-DX3DX09BKXK1</ActiveDebugProfile>
+    <SelectedDevice>iPhone-XR-JSK</SelectedDevice>
+    <ActiveDebugProfile>iPhone-XR-JSK</ActiveDebugProfile>
     <TargetiOSDevice>&lt;%3fxml version="1.0" encoding="UTF-8"%3f&gt;
 &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
 &lt;plist version="1.0"&gt;
@@ -24,6 +24,6 @@
 </TargetiOSDevice>
     <DeveloperId>senseidevz%40gmail.com</DeveloperId>
     <DevelopmentTeamId>H7KP7KN969</DevelopmentTeamId>
-    <DefaultDevice>iPhone 12 iOS 15.0</DefaultDevice>
+    <DefaultDevice>iPad %289th generation%29 iOS 15.0</DefaultDevice>
   </PropertyGroup>
 </Project>

@@ -1,1 +1,1 @@
-<Devices><Device id="7f4c0c60"><ResultingAbi>arm64-v8a</ResultingAbi><ToolsAbi /><SdkVersion>30</SdkVersion><LongOutput>product:cepheus_eea;model:MI_9;device:cepheus;transport_id:2</LongOutput></Device></Devices>
+<Devices><Device id="7f4c0c60"><ResultingAbi>arm64-v8a</ResultingAbi><ToolsAbi /><SdkVersion>30</SdkVersion><LongOutput>product:cepheus_eea;model:MI_9;device:cepheus;transport_id:1</LongOutput></Device></Devices>
