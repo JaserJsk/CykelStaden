@@ -1059,10 +1059,10 @@ D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstade
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Xamarin.Google.Android.Material.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Xamarin.Google.Android.Material.pdb
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Xamarin.Google.Guava.ListenableFuture.dll
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\jl\da79961e-2919-4783-aef9-b4f1e222c172.jar
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\jl\701d3efa-f5a0-4c3b-9f09-0a4d710ea847.jar
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_AndroidXJetifyJavaLibraryRules.stamp
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\proguard\0c7cb4af-d47d-4065-9bf8-ca9c5e380c10.cfg
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\proguard\f2bc7b76-e358-469b-95de-e7f2e7bff016.txt
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\proguard\534accb7-d1d1-4df5-84e3-452ae8e44727.cfg
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\proguard\63c9655a-9d25-4948-8e13-b153c1940c9c.txt
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_AndroidXJetifyProguardRules.stamp
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\_AndroidXJetifyProguardRules.jetify
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_AndroidXCecilfy.stamp
