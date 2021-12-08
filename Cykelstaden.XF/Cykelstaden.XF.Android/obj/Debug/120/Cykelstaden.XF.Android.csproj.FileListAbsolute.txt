@@ -767,11 +767,11 @@ D:\Development\Projects\Github VS\Cykelstaden.XF[Redesign]\Cykelstaden.XF\Cykels
 D:\Development\Projects\Github VS\Cykelstaden.XF[Redesign]\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\proguard\f89525b9-127c-45cd-9839-2c6d669b1784.cfg
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\Cykelstaden.XF.Android.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\Cykelstaden.XF.Android.pdb
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\com.goteborg.cykelstaden.apk
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\com.goteborg.cykelstaden.aab
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\com.goteborg.cykelstaden-Signed.aab
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\com.goteborg.cykelstaden-Signed.apk
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\com.goteborg.cykelstaden-Signed.apk.idsig
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\se.goteborg.trafikkontoret.cyxf.apk
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\se.goteborg.trafikkontoret.cyxf.aab
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\se.goteborg.trafikkontoret.cyxf-Signed.aab
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\se.goteborg.trafikkontoret.cyxf-Signed.apk
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\se.goteborg.trafikkontoret.cyxf-Signed.apk.idsig
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\Cykelstaden.XF.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\Cykelstaden.XF.pdb
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\bin\Debug\en\Cykelstaden.XF.resources.dll
@@ -821,10 +821,10 @@ D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstade
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\Cykelstaden.XF.Android.csproj.CopyComplete
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\Cykelstaden.XF.Android.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\Cykelstaden.XF.Android.pdb
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\bin\com.goteborg.cykelstaden.apk
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\bin\se.goteborg.trafikkontoret.cyxf.apk
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\bin\base.zip
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\bin\com.goteborg.cykelstaden.aab
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\bin\com.goteborg.cykelstaden.apks
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\bin\se.goteborg.trafikkontoret.cyxf.aab
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\bin\se.goteborg.trafikkontoret.cyxf.apks
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\res\values\styles.xml
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\res\values\colors.xml
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
@@ -866,7 +866,6 @@ D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstade
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Plugin.Messaging.Abstractions.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Plugin.Messaging.Abstractions.pdb
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Plugin.Messaging.dll
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Plugin.Messaging.dll.mdb
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Plugin.Permissions.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Plugin.Permissions.pdb
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Syncfusion.Buttons.XForms.Android.dll
@@ -1059,10 +1058,10 @@ D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstade
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Xamarin.Google.Android.Material.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Xamarin.Google.Android.Material.pdb
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Xamarin.Google.Guava.ListenableFuture.dll
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\jl\701d3efa-f5a0-4c3b-9f09-0a4d710ea847.jar
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\jl\7ad8a2e3-7b30-44a8-9840-afce62727a87.jar
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_AndroidXJetifyJavaLibraryRules.stamp
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\proguard\534accb7-d1d1-4df5-84e3-452ae8e44727.cfg
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\proguard\63c9655a-9d25-4948-8e13-b153c1940c9c.txt
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\proguard\56e0d00c-a971-4858-9f20-8eee1bcb33b9.txt
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\proguard\d35c3fa7-ae68-4a1b-a1cc-f08f21952542.cfg
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_AndroidXJetifyProguardRules.stamp
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\_AndroidXJetifyProguardRules.jetify
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_AndroidXCecilfy.stamp
@@ -1502,7 +1501,7 @@ D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstade
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_AndroidXJetifyManifest.stamp
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\androidx\_AndroidXJetifyManifest.jetify
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\bin\packaged_resources
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\src\com\goteborg\cykelstaden\R.java
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\src\se\goteborg\trafikkontoret\cyxf\R.java
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\compressed_assemblies.arm64-v8a.s
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\compressed_assemblies.armeabi-v7a.s
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\compressed_assemblies.x86.s
@@ -1532,3 +1531,4 @@ D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstade
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF.Android\obj\Debug\120\android\assets\Plugin.Messaging.pdb

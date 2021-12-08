@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_AppExtensionDebugSymbolProperties Include="Cykelstaden.XF.iOS.app">
+      <NativeExecutable>Cykelstaden.XF.iOS</NativeExecutable>
+      <CompiledArchitectures>ARM64</CompiledArchitectures>
+      <NoDSymUtil>false</NoDSymUtil>
+      <NoSymbolStrip>false</NoSymbolStrip>
+      <SymbolsList>\Users\jaser.jsk\Library\Caches\Xamarin\mtbs\builds\Cykelstaden.XF.iOS\601bb2fb4f142172251e3e2fda57f67b27fab38c3b254ebe8a4b56220f20a2f9\obj\iPhone\Debug\device-builds\iphone11.8-15.1\mtouch-symbols.list</SymbolsList>
+    </_AppExtensionDebugSymbolProperties>
+  </ItemGroup>
+</Project>

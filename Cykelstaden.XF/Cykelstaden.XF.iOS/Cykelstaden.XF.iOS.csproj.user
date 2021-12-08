@@ -22,8 +22,10 @@
 &lt;/dict&gt;
 &lt;/plist&gt;
 </TargetiOSDevice>
-    <DeveloperId>senseidevz%40gmail.com</DeveloperId>
-    <DevelopmentTeamId>H7KP7KN969</DevelopmentTeamId>
+    <DeveloperId>
+    </DeveloperId>
+    <DevelopmentTeamId>
+    </DevelopmentTeamId>
     <DefaultDevice>iPad %289th generation%29 iOS 15.0</DefaultDevice>
   </PropertyGroup>
 </Project>

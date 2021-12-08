@@ -10,7 +10,12 @@
       "ProjectGuid": "ea4820be-8019-4e29-9a95-3909df7d174f",
       "DisplayName": "Cykelstaden.XF.Android",
       "ColorIndex": 1
+    },
+    "9f2b8eaa-0887-411d-bfea-c783c932ef60": {
+      "ProjectGuid": "9f2b8eaa-0887-411d-bfea-c783c932ef60",
+      "DisplayName": "Cykelstaden.XF",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

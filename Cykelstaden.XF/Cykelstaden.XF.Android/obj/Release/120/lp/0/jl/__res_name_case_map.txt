@@ -1,0 +1,5 @@
+layout/LoadingDialogLayout.axml;layout/loadingdialoglayout.xml
+anim/extra_dialog_enter.xml;anim/extra_dialog_enter.xml
+anim/extra_dialog_exit.xml;anim/extra_dialog_exit.xml
+values/Strings.xml;values/strings.xml
+values/styles.xml;values/styles.xml

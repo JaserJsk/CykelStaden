@@ -47,7 +47,6 @@ D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstade
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\bin\Debug\netstandard2.0\ref\Cykelstaden.XF.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\bin\Debug\netstandard2.0\Cykelstaden.XF.pdb
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\bin\Debug\netstandard2.0\en\Cykelstaden.XF.resources.dll
-D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\obj\Debug\netstandard2.0\Cykelstaden.XF.csproj.AssemblyReference.cache
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\obj\Debug\netstandard2.0\Cykelstaden.XF.Resources.Icons.IconFont.resources
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\obj\Debug\netstandard2.0\Cykelstaden.XF.Resources.Langs.Lang.resources
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\obj\Debug\netstandard2.0\Cykelstaden.XF.Resources.Langs.Lang.en.resources
@@ -87,3 +86,4 @@ D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstade
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\obj\Debug\netstandard2.0\Cykelstaden.XF.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\obj\Debug\netstandard2.0\ref\Cykelstaden.XF.dll
 D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\obj\Debug\netstandard2.0\Cykelstaden.XF.pdb
+D:\Development\Projects\Github VS\Cykelstaden-Redesign\Cykelstaden.XF\Cykelstaden.XF\obj\Debug\netstandard2.0\Cykelstaden.XF.csproj.AssemblyReference.cache
